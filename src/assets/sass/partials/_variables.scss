@@ -1,0 +1,24 @@
+$assetsDir: '/assets';
+
+$white: #fff;
+$black: #000;
+$blue-dark: #1f3040;
+$dark: #213341;
+
+$colors: (
+	white: $white,
+	black: $black,
+	blue-dark: $blue-dark,
+	dark: $dark
+);
+
+$aside-index: 100000;
+$slider-index: 1000;
+
+$responsive-font-sizes: (
+	xl: 3rem,
+	lg: 2.7rem,
+	md: 2.4rem,
+	sm: 1.8rem,
+	xs: 1.2rem
+);
