@@ -20,7 +20,7 @@
             </b-row>
             <b-row class="mt-sm-4">
                 <b-col class="d-flex mt-2 mt-sm-0" cols="12" sm="6">
-                    <b-link :href="`${publicPath}regulamin.pdf`" class="text-white d-flex align-items-end" target="_blank">
+                    <b-link class="text-white d-flex align-items-end" target="_blank">
                         <span class="font-weight-bold">regulamin</span>
                     </b-link>
                 </b-col>
@@ -33,8 +33,6 @@
 </template>
 
 <script>
-	// import regulations from '@/assets/regulamin.pdf'
-
 	export default {
 		name: 'Contact',
 		data () {
