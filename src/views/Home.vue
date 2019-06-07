@@ -1,7 +1,7 @@
 <template>
-    <div>
-
-    </div>
+    <b-col>
+        Homeee
+    </b-col>
 </template>
 
 <script>
