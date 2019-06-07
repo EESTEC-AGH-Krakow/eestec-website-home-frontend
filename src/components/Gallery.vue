@@ -55,7 +55,7 @@
                 images: [...Array(10).keys()].map(x => {
                     return {
                         id: x,
-                        src: require(`@/assets/images/slider/${x + 1}.jpg`),
+                        src: "",
                     }
                 }),
             }

@@ -46,7 +46,7 @@
                 gospodarki. Udostępnia także firmom i organizacjom sprzęt elektroniczny, specjalistyczne oprogramowanie i infrastrukturę pomocną w rozszerzaniu ich możliwości i oferty.
             </p>
         </b-col>
-        <img alt="mountains" class="img-fluid w-100" src="@/assets/images/mountains-middle.png"/>
+        <img alt="mountains" class="img-fluid w-100" src=""/>
     </b-row>
 </template>
 

@@ -26,10 +26,7 @@
   import Gallery from './components/Gallery'
   import AboutUs from './components/AboutUs'
   import Contact from './components/Contact'
-  import FAQ from './components/FAQ'
-  import Partners from './components/Partners'
   import Place from './components/Place'
-  import Timer from './components/Timer'
 
   export default {
     name: 'app',
@@ -40,10 +37,7 @@
       Gallery,
       AboutUs,
       Contact,
-      FAQ,
-      Partners,
-      Place,
-      Timer,
+      Place
     },
   }
 </script>
@@ -54,7 +48,6 @@
         font-style: normal;
         font-weight: normal;
         font-display: swap;
-        src: url("assets/fonts/Norse.otf");
     }
 
     @font-face {
@@ -62,7 +55,6 @@
         font-style: normal;
         font-weight: normal;
         font-display: swap;
-        src: url("assets/fonts/BabelStoneRunicElderFuthark.ttf");
     }
 
     @font-face {
@@ -70,7 +62,6 @@
         font-style: normal;
         font-weight: normal;
         font-display: swap;
-        src: url("assets/fonts/ElegantLux.otf");
     }
 
     * {

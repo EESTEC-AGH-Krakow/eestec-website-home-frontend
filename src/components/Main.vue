@@ -1,9 +1,9 @@
 <template>
-    <div :style="{backgroundImage: `url(${require('@/assets/images/header-bg.jpg')})`}" class="background d-flex flex-column position-relative">
+    <div :style="{backgroundImage: `url()`}" class="background d-flex flex-column position-relative">
         <b-row class="justify-content-center align-items-center flex-fill" no-gutters>
             <b-col class="mx-auto" cols="10" lg="12" md="8">
                 <div class="d-flex flex-column align-items-center">
-                    <img :src="require('@/assets/images/header-logo.png')" alt="Hacknarök" class="img-fluid"/>
+                    <img src="" alt="Hacknarök" class="img-fluid"/>
                     <h1 class="text-white text-center mt-4 primary-font">Krakowski Park Technologiczny<br/>6-7 kwietnia</h1>
                 </div>
             </b-col>
