@@ -1,10 +1,18 @@
 <template>
-    <div :style="{backgroundImage: `url()`}" class="background d-flex flex-column position-relative">
+    <div class="bg-red background d-flex flex-column position-relative">
+        <vue-particles
+                :linesWidth="2"
+                :particleOpacity="0.7"
+                :particleSize="5"
+                class="position-absolute h-100"
+                clickMode="repulse"
+                color="#fff"
+                particlesNumber="150"
+        ></vue-particles>
         <b-row class="justify-content-center align-items-center flex-fill" no-gutters>
             <b-col class="mx-auto" cols="10" lg="12" md="8">
                 <div class="d-flex flex-column align-items-center">
-                    <img src="" alt="Hacknarök" class="img-fluid"/>
-                    <h1 class="text-white text-center mt-4 primary-font">Krakowski Park Technologiczny<br/>6-7 kwietnia</h1>
+                    <img alt="EESTEC AGH Kraków" class="img-fluid" src="@/assets/images/logo_white.png"/>
                 </div>
             </b-col>
         </b-row>
@@ -15,21 +23,24 @@
   export default {
     name: 'Main',
     data () {
-      return {
-        applicable: false,
-        applicationForm: 'https://docs.google.com/forms/d/e/1FAIpQLSfTQTz3Q6LM3ahQNiyipqFRX4vcOuxH8xUdVVXKuAAc5JLvvw/viewform',
-      }
+      return {}
     },
+    components: {},
   }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
+    .row {
+        pointer-events: none;
+    }
+
     .background {
         height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+
 
         .position-absolute {
             bottom: 0;

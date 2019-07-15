@@ -1,13 +1,13 @@
 .primary-font {
-	font-family: 'Norse', sans-serif !important;
-}
-
-.secondary-font {
 	font-family: 'Elegant', sans-serif !important;
 }
 
+.secondary-font {
+	font-family: 'Inter', sans-serif !important;
+}
+
 .third-font {
-	font-family: 'Futhark', sans-serif !important;
+	font-family: 'Cinzel', sans-serif !important;
 }
 
 @each $color, $value in $colors {

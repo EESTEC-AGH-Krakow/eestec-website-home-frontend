@@ -5,13 +5,10 @@
         </header>
         <main>
             <Main id="main"/>
-           <!-- <Timer id="timer"/>-->
             <AboutProject id="about-project"/>
             <Gallery id="gallery"/>
             <AboutUs id="about-us"/>
             <Place id="place"/>
-            <FAQ id="faq"/>
-            <Partners id="partners"/>
         </main>
         <footer>
             <Contact id="contact"/>
@@ -37,32 +34,15 @@
       Gallery,
       AboutUs,
       Contact,
-      Place
+      Place,
     },
   }
 </script>
 
 <style lang="scss">
-    @font-face {
-        font-family: 'Norse';
-        font-style: normal;
-        font-weight: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Futhark';
-        font-style: normal;
-        font-weight: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Elegant';
-        font-style: normal;
-        font-weight: normal;
-        font-display: swap;
-    }
+    @import url('assets/fonts/Inter/inter.scss');
+    @import url('assets/fonts/Elegant/elegant.scss');
+    @import url('assets/fonts/Cinzel/cinzel.scss');
 
     * {
         box-sizing: border-box;
@@ -114,7 +94,6 @@
     .flip-card__top, .flip-card__bottom, .flip-card__back, .flip-card__back-bottom {
         &, &::before {
             width: 5em !important;
-            @extend .third-font;
         }
     }
 </style>
