@@ -12,7 +12,7 @@ $colors: (
 	red: $red
 );
 
-$aside-index: 100000;
+$navbar-index: 100000;
 $slider-index: 1000;
 
 $responsive-font-sizes: (
@@ -22,3 +22,8 @@ $responsive-font-sizes: (
 	sm: 1.8rem,
 	xs: 1.2rem
 );
+
+$transition-duration: .5s;
+$transition-easing: ease-in-out;
+$animation-transition: all $transition-duration $transition-easing;
+$transition-fast: all .2s $transition-easing;

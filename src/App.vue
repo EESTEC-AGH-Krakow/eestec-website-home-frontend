@@ -1,7 +1,7 @@
 <template>
     <b-container class="p-0" fluid id="app">
         <header>
-            <Aside/>
+            <Navbar/>
         </header>
         <main>
             <Main id="main"/>
@@ -18,7 +18,7 @@
 
 <script>
   import Main from './components/Main'
-  import Aside from './components/Aside'
+  import Navbar from './components/Navbar'
   import AboutProject from './components/AboutProject'
   import Gallery from './components/Gallery'
   import AboutUs from './components/AboutUs'
@@ -28,7 +28,7 @@
   export default {
     name: 'app',
     components: {
-      Aside,
+      Navbar,
       Main,
       AboutProject,
       Gallery,

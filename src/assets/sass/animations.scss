@@ -1,10 +1,6 @@
-$transition-duration: .5s;
-$transition-easing: ease-in-out;
-$animation-transition: all $transition-duration $transition-easing;
-
 .slide-fade-header-enter-active, .slide-fade-header-leave-active {
 	transition: $animation-transition !important;
-	z-index: $aside-index;
+	z-index: $navbar-index;
 }
 
 .slide-fade-header-enter, .slide-fade-header-leave-to {
@@ -28,7 +24,7 @@ $animation-transition: all $transition-duration $transition-easing;
 //---------------------------------------
 
 .fade-scale-enter-active, .fade-scale-leave-active {
-	transition: $animation-transition;
+	transition: $transition-fast;
 }
 
 .fade-scale-enter, .fade-scale-leave-to {

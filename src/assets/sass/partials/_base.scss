@@ -24,3 +24,7 @@
 	height: 24px;
 	flex-shrink: 0;
 }
+
+.transition-fast {
+	transition: $transition-fast;
+}

@@ -7,7 +7,7 @@
                 class="position-absolute h-100"
                 clickMode="repulse"
                 color="#fff"
-                particlesNumber="150"
+                :particlesNumber="150"
         ></vue-particles>
         <b-row class="justify-content-center align-items-center flex-fill" no-gutters>
             <b-col class="mx-auto" cols="10" lg="12" md="8">
