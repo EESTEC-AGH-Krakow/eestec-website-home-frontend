@@ -1,26 +1,25 @@
 <template>
-    <headroom class="h-0">
+    <header class="sticky-top m-0 p-0">
         <b-navbar :class="slided ? 'darken-background' : 'bg-transparent'" class="d-flex transition-fast pb-2" ref="navbar">
-            <b-row class="flex-fill" no-gutters>
+            <b-row class="flex-fill flex-column flex-md-row" no-gutters>
                 <transition name="fade-scale">
-                    <b-col cols="2" v-show="slided">
-                        <b-navbar-brand class="d-flex" href="#">
+                    <b-col cols="12" md="2" v-show="slided">
+                        <b-navbar-brand class="d-flex m-0 mr-md-3" href="#">
                             <img alt="logo" class="img-fluid w-50 mx-auto" src="@/assets/images/logo.png">
                         </b-navbar-brand>
                     </b-col>
                 </transition>
-                <b-col class="d-flex mx-auto" cols="10">
-                    <b-navbar-nav align="between" class="flex-fill align-items-center" fill>
-                        <b-nav-item :class="{ light: slided }" :key="index" @click="scrollTo(link)" class="text-center font-weight-bold" href="#" v-for="(link, index) in links"><span class="transition-fast">{{ link.name }}</span></b-nav-item>
+                <b-col class="d-flex mx-auto" cols="12" md="10">
+                    <b-navbar-nav align="between" class="flex-fill align-items-center d-flex flex-column flex-md-row" fill>
+                        <b-nav-item :class="{ light: slided }" :key="index" @click="scrollTo(link)" class="text-center font-weight-bold" href="#" v-for="(link, index) in links"><span class="transition-fast secondary-font">{{ link.name }}</span></b-nav-item>
                     </b-navbar-nav>
                 </b-col>
             </b-row>
         </b-navbar>
-    </headroom>
+    </header>
 </template>
 
 <script>
-  import { headroom } from 'vue-headroom'
 
   export default {
     name: 'Navbar',
@@ -53,19 +52,18 @@
         ],
       }
     },
-    components: {
-      headroom,
-    },
     mounted () {
       window.addEventListener('scroll', () => {
         this.scrollY = window.scrollY
       })
       window.addEventListener('resize', () => {
         this.mainHeight = window.innerHeight
-        this.clientHeight = this.$refs.navbar.clientHeight
+        this.clientHeight = this.$refs.navbar ? this.$refs.navbar.clientHeight : this.clientHeight
       })
-      let resize = new Event('resize')
-      window.dispatchEvent(resize)
+      let event = new Event('resize')
+      window.dispatchEvent(event)
+      event = new Event('scroll')
+      window.dispatchEvent(event)
     },
     methods: {
       scrollTo (link) {

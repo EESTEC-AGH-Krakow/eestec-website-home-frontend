@@ -1,9 +1,9 @@
 .primary-font {
-	font-family: 'Elegant', sans-serif !important;
+	font-family: 'Inter', sans-serif !important;
 }
 
 .secondary-font {
-	font-family: 'Inter', sans-serif !important;
+	font-family: 'Elegant', sans-serif !important;
 }
 
 .third-font {
@@ -27,4 +27,8 @@
 
 .transition-fast {
 	transition: $transition-fast;
+}
+
+.h-0 {
+	height: 0 !important;
 }

@@ -1,8 +1,9 @@
 <template>
     <b-container class="p-0" fluid id="app">
-        <header>
+        <headroom class="h-0" id="headroom" v-if="largerDevice">
             <Navbar/>
-        </header>
+        </headroom>
+        <Navbar v-else/>
         <main>
             <Main id="main"/>
             <AboutProject id="about-project"/>
@@ -17,6 +18,7 @@
 </template>
 
 <script>
+  import { headroom } from 'vue-headroom'
   import Main from './components/Main'
   import Navbar from './components/Navbar'
   import AboutProject from './components/AboutProject'
@@ -35,6 +37,12 @@
       AboutUs,
       Contact,
       Place,
+      headroom,
+    },
+    computed: {
+      largerDevice () {
+        return this.wMD || this.wLG || this.wXL
+      },
     },
   }
 </script>
