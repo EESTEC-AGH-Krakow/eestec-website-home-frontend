@@ -75,19 +75,6 @@
         flex: 1 0 auto;
     }
 
-    .btn {
-        @extend .rounded-0, .font-weight-bold, .bg-transparent, .border, .border-white, .px-4, .py-2;
-        border-width: 5px !important;
-
-        &:hover {
-            @extend .bg-white, .text-black;
-        }
-
-        &:focus {
-            box-shadow: none !important;
-        }
-    }
-
     a {
         &:hover {
             text-decoration: none;

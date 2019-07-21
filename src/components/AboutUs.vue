@@ -1,5 +1,5 @@
 <template>
-    <b-row no-gutters>
+    <b-row class="pb-4 pb-sm-5" no-gutters>
         <b-col cols="12">
             <h1 class="text-center my-4 my-sm-5 display-4">O nas</h1>
         </b-col>
@@ -16,6 +16,22 @@
             <p class="text-justify mb-4 mb-sm-5">
                 Później tu będzie content albo coś innego.
             </p>
+        </b-col>
+        <b-col class="mx-auto text-black" cols="11" lg="8" md="10">
+            <b-row>
+                <b-col class="d-flex" cols="6">
+                    <b-button class="flex-fill" size="lg" v-b-modal.modal-vision variant="outline-primary">Wizja</b-button>
+                    <b-modal centered hide-footer id="modal-vision" title="Wizja">
+                        <p class="my-4">Hello from modal!</p>
+                    </b-modal>
+                </b-col>
+                <b-col class="d-flex" cols="6">
+                    <b-button class="flex-fill" size="lg" v-b-modal.modal-manifesto variant="outline-primary">Manifest</b-button>
+                    <b-modal centered hide-footer id="modal-manifesto" title="Manifest">
+                        <p class="my-4">Hello from modal!</p>
+                    </b-modal>
+                </b-col>
+            </b-row>
         </b-col>
     </b-row>
 </template>

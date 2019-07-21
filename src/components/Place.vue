@@ -31,11 +31,7 @@
         </b-col>
         <b-col class="mx-auto" cols="11" lg="8" md="10">
             <p class="text-justify my-4 my-sm-5">
-                Nasz hackathon odbędzie się w Krakowskim Parku Technologicznym, który wspiera nas od pierwszej edycji.
-            </p>
-            <p class="text-justify">
-                Krakowski Park Technologiczny to najbardziej kompletny one-stop-shop dla biznesu w Polsce, gdzie przedsiębiorcy, naukowcy i samorządowcy tworzą ekosystem rozwoju małopolskiej
-                gospodarki. Udostępnia także firmom i organizacjom sprzęt elektroniczny, specjalistyczne oprogramowanie i infrastrukturę pomocną w rozszerzaniu ich możliwości i oferty.
+                Nasze biuro mieści się w budynku domu studenckiego ALFA na terenie AGH.
             </p>
         </b-col>
     </b-row>
@@ -47,9 +43,9 @@
     name: 'Place',
     data () {
       return {
-        zoom: 15,
-        center: [50.0211894, 19.8862796046309],
-        placeMarker: [50.0211894, 19.8862796046309],
+        zoom: 16,
+        center: [50.065603, 19.916682],
+        placeMarker: [50.065603, 19.916682],
         url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       }
     },

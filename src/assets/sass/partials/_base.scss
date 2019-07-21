@@ -40,3 +40,7 @@
 .display-4 {
 	@extend .first-font;
 }
+
+.btn, .modal-header, .modal-body {
+	@extend .rounded-0;
+}
