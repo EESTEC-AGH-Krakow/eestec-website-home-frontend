@@ -1,7 +1,7 @@
 <template>
-    <b-row class="bg-blue-dark text-white" no-gutters>
+    <b-row :style="{background: `url(${require('@/assets/images/background.png')})`}" class="text-white background" no-gutters>
         <b-col cols="12">
-            <h1 class="text-center my-4 my-sm-5 display-4">Jak dojechać</h1>
+            <h1 class="text-center my-4 my-sm-5 display-4">Znajdź nas</h1>
         </b-col>
         <b-col class="mb-4 mb-sm-5 mb-lg-0" cols="10" lg="5" offset="1" offset-lg="1" xl="4">
             <l-map :center="center"
@@ -11,9 +11,9 @@
                    class="map w-100">
                 <l-tile-layer :url="url"></l-tile-layer>
                 <l-marker :lat-lng="placeMarker">
-                    <l-tooltip class="font-weight-bold second-font">Krakowski Park Technologiczny<br>
-                        ul. Podole 60<br>
-                        30-394, Kraków
+                    <l-tooltip class="font-weight-bold second-font">biuro EESTEC AGH Kraków<br>
+                        Reymonta 17<br>
+                        30-059, Kraków
                     </l-tooltip>
                 </l-marker>
             </l-map>
@@ -24,16 +24,8 @@
                     <font-awesome-icon icon="map-marker-alt" size="lg"></font-awesome-icon>
                 </b-col>
                 <b-col>
-                    <span class="second-font">Krakowski Park Technologiczny</span><br>
-                    <span class="second-font">Podole 60</span>
-                </b-col>
-            </b-row>
-            <b-row no-gutters>
-                <b-col cols="2">
-                    <font-awesome-icon icon="bus" size="lg"></font-awesome-icon>
-                </b-col>
-                <b-col>
-                    <span class="second-font">Linie: {{ buses }}</span>
+                    <span class="second-font">Dom Studencki ALFA</span><br>
+                    <span class="second-font">Reymonta 17</span>
                 </b-col>
             </b-row>
         </b-col>
@@ -46,7 +38,6 @@
                 gospodarki. Udostępnia także firmom i organizacjom sprzęt elektroniczny, specjalistyczne oprogramowanie i infrastrukturę pomocną w rozszerzaniu ich możliwości i oferty.
             </p>
         </b-col>
-        <img alt="mountains" class="img-fluid w-100" src=""/>
     </b-row>
 </template>
 
@@ -59,7 +50,6 @@
         zoom: 15,
         center: [50.0211894, 19.8862796046309],
         placeMarker: [50.0211894, 19.8862796046309],
-        busArray: [11, 17, 18, 52, 116, 194, 203, 204, 213, 223, 253, 263, 283],
         url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       }
     },
@@ -89,5 +79,9 @@
 
     .img-fluid {
         transform: rotate(180deg);
+    }
+
+    .background {
+        @include background();
     }
 </style>

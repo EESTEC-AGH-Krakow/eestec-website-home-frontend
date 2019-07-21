@@ -1,13 +1,17 @@
 .first-font {
-	font-family: 'Inter', sans-serif !important;
+	//font-family: 'Inter', sans-serif !important;
+	font-family: 'Roboto', sans-serif !important;
 }
 
 .second-font {
-	font-family: 'Elegant', sans-serif !important;
+	//font-family: 'Elegant', sans-serif !important;
+	font-family: 'Montserrat', sans-serif !important;
 }
 
 .third-font {
-	font-family: 'Cinzel', sans-serif !important;
+	//font-family: 'Cinzel', sans-serif !important;
+	font-family: 'Elegant', sans-serif !important;
+	//font-family: 'Libre Baskerville', sans-serif !important;
 }
 
 @each $color, $value in $colors {

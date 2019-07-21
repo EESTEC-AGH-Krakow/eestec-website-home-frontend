@@ -1,8 +1,9 @@
 <template>
-    <div class="bg-red background d-flex flex-column position-relative">
+    <div class="bg-red-darker background d-flex flex-column position-relative">
         <vue-particles
                 :linesWidth="2"
-                :particleOpacity="0.7"
+                :lineOpacity="0.4"
+                :particleOpacity="0.8"
                 :particleSize="5"
                 class="position-absolute h-100"
                 clickMode="repulse"
@@ -36,11 +37,6 @@
 
     .background {
         height: 100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-
 
         .position-absolute {
             bottom: 0;

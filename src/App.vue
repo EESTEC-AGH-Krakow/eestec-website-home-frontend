@@ -8,7 +8,7 @@
             <Main id="main"/>
             <!--            <AboutProject id="about-project"/>-->
             <AboutUs id="about-us"/>
-            <Gallery id="gallery"/>
+            <!--            <Gallery id="gallery"/>-->
             <Place id="place"/>
         </main>
         <footer>
@@ -22,7 +22,7 @@
   import Main from './components/Main'
   import Navbar from './components/Navbar'
   // import AboutProject from './components/AboutProject'
-  import Gallery from './components/Gallery'
+  // import Gallery from './components/Gallery'
   import AboutUs from './components/AboutUs'
   import Contact from './components/Contact'
   import Place from './components/Place'
@@ -33,7 +33,7 @@
       Navbar,
       Main,
       // AboutProject,
-      Gallery,
+      // Gallery,
       AboutUs,
       Contact,
       Place,
@@ -48,9 +48,10 @@
 </script>
 
 <style lang="scss">
-    @import url('assets/fonts/Inter/inter.scss');
+    /*@import url('assets/fonts/Inter/inter.scss');*/
     @import url('assets/fonts/Elegant/elegant.scss');
-    @import url('assets/fonts/Cinzel/cinzel.scss');
+    /*@import url('assets/fonts/Cinzel/cinzel.scss');*/
+    @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
     * {
         box-sizing: border-box;

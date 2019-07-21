@@ -1,15 +1,19 @@
 $white: #fff;
 $black: #000;
-$blue-dark: #1f3040;
-$dark: #213341;
-$red: #CB110F;
+$red: #E52A30;
+$red-lighter: #FA4952;
+$red-light: #FC7279;
+$red-darker: #C10710;
+$red-dark: #990008;
 
 $colors: (
 	white: $white,
 	black: $black,
-	blue-dark: $blue-dark,
-	dark: $dark,
-	red: $red
+	red: $red,
+	red-lighter: $red-lighter,
+	red-light: $red-light,
+	red-darker: $red-darker,
+	red-dark: $red-dark
 );
 
 $navbar-index: 100000;

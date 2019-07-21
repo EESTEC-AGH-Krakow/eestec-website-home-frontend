@@ -9,16 +9,16 @@
                     <transition name="fade-scale">
                         <b-col :class="{'d-flex align-items-center': slided}" class="mx-auto" cols="8" md="2" v-show="slided" xl="1">
                             <b-navbar-brand class="d-flex mx-auto mr-md-3" href="#">
-                                <img :class="{'w-75': !wXL}" alt="logo" class="img-fluid mx-auto" src="@/assets/images/logo.png">
+                                <img :class="{'w-75': !wXL}" alt="logo" class="img-fluid mx-auto" src="@/assets/images/logo_white.png">
                             </b-navbar-brand>
                         </b-col>
                     </transition>
                     <b-col class="d-flex mx-auto" cols="12" md="10" xl="11">
-
                         <b-navbar-nav align="between" class="flex-fill align-items-center d-flex flex-column flex-md-row" fill>
-                            <b-nav-item :class="{ light: slided }" :key="index" @click="scrollTo(link)" class="text-center font-weight-bold" href="#" v-for="(link, index) in links"><span class="transition-fast">{{ link.name }}</span></b-nav-item>
+                            <b-nav-item :class="{ light: slided }" :key="index" @click="scrollTo(link)" class="text-center font-weight-bold" href="#" v-for="(link, index) in links">
+                                <small class="transition-fast font-weight-bold second-font">{{ link.name }}</small>
+                            </b-nav-item>
                         </b-navbar-nav>
-
                     </b-col>
                 </b-row>
             </b-collapse>
@@ -47,7 +47,7 @@
             href: 'about-us',
           },
           {
-            name: 'jak dojechać',
+            name: 'znajdź nas',
             href: 'place',
           },
           {
@@ -107,11 +107,11 @@
 
     .nav-item {
         * {
-            color: $gray-800;
+            color: $gray-500;
         }
 
         &:hover * {
-            color: lighten($gray-800, 30%);
+            color: lighten($gray-500, 15%);
         }
 
         &.light {
