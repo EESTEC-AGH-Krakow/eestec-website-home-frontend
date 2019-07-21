@@ -1,8 +1,8 @@
-.primary-font {
+.first-font {
 	font-family: 'Inter', sans-serif !important;
 }
 
-.secondary-font {
+.second-font {
 	font-family: 'Elegant', sans-serif !important;
 }
 
@@ -31,4 +31,8 @@
 
 .h-0 {
 	height: 0 !important;
+}
+
+.display-4 {
+	@extend .first-font;
 }

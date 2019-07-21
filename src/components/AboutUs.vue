@@ -5,18 +5,12 @@
         </b-col>
         <b-col class="mx-auto" cols="11" lg="8" md="10">
             <p class="text-justify mb-4 mb-sm-5">
-                Jako EESTEC AGH Kraków tworzymy lokalne i międzynarodowe projekty dając studentom kierunków elektrycznych, informatycznych i pokrewnych możliwość rozwoju umiejętności liderskich i
-                technicznych oraz poznawania nowych kultur.
-            </p>
+                <span class="font-weight-bold">AGH Electrical Engineering and Computer Sciences Students’ Club</span> to uczelniana organizacja studencka - apolityczna i non-profit - od lat prężnie działająca na Akademii Górniczo-Hutniczej w Krakowie.
 
-            <span>Za tegoroczną edycją wydarzenia Hacknarök stoją odważni wikingowie na czele z:</span>
-            <ul class="list-unstyled mb-4 mb-sm-5">
-                <li><span class="font-weight-bold">Mateusz Leśniak</span> - Koordynator Główny</li>
-                <li><span class="font-weight-bold">Maria Mamica</span> - Koordynator ds. Pozyskiwania Funduszy</li>
-                <li><span class="font-weight-bold">Ewelina Niemczyk</span> - Koordynator ds. Promocji</li>
-                <li><span class="font-weight-bold">Hubert Kompanowski</span> - Koordynator ds. Logistyki</li>
-                <li><span class="font-weight-bold">Mateusz Kwaśny</span> - Koordynator ds. Administracji</li>
-            </ul>
+                Stanowimy lokalny komitet ogólnoeuropejskiej organizacji studenckiej <span class="font-weight-bold">EESTEC</span>, stąd częściej używamy naszej nieoficjalnej nazwy - <span class="font-weight-bold">EESTEC AGH Kraków</span>.
+
+                Na Uczelni istniejemy nieprzerwanie od 1998 roku i choć wywodzimy się z Koła Naukowego Elektroników, to od 2009 roku działamy już w pełni samodzielnie. Szczególnie bliskie związki łączą nas ze studentami i władzami <span class="font-weight-bold">Wydziału Informatyki Elektroniki i Telekomunikacji</span> oraz <span class="font-weight-bold">Wydziału Elektrotechniki, Automatyki, Informatyki i Inżynierii Biomedycznej</span>.
+            </p>
         </b-col>
     </b-row>
 </template>

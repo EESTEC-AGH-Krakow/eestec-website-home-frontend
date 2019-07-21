@@ -6,9 +6,9 @@
         <Navbar v-else/>
         <main>
             <Main id="main"/>
-            <AboutProject id="about-project"/>
-            <Gallery id="gallery"/>
+            <!--            <AboutProject id="about-project"/>-->
             <AboutUs id="about-us"/>
+            <Gallery id="gallery"/>
             <Place id="place"/>
         </main>
         <footer>
@@ -21,7 +21,7 @@
   import { headroom } from 'vue-headroom'
   import Main from './components/Main'
   import Navbar from './components/Navbar'
-  import AboutProject from './components/AboutProject'
+  // import AboutProject from './components/AboutProject'
   import Gallery from './components/Gallery'
   import AboutUs from './components/AboutUs'
   import Contact from './components/Contact'
@@ -32,7 +32,7 @@
     components: {
       Navbar,
       Main,
-      AboutProject,
+      // AboutProject,
       Gallery,
       AboutUs,
       Contact,
@@ -54,7 +54,7 @@
 
     * {
         box-sizing: border-box;
-        @extend .primary-font;
+        @extend .second-font;
     }
 
     html, body {
