@@ -12,6 +12,11 @@
                 Na Uczelni istniejemy nieprzerwanie od 1998 roku i choć wywodzimy się z Koła Naukowego Elektroników, to od 2009 roku działamy już w pełni samodzielnie. Szczególnie bliskie związki łączą nas ze studentami i władzami <span class="font-weight-bold">Wydziału Informatyki Elektroniki i Telekomunikacji</span> oraz <span class="font-weight-bold">Wydziału Elektrotechniki, Automatyki, Informatyki i Inżynierii Biomedycznej</span>.
             </p>
         </b-col>
+        <b-col class="mx-auto" cols="11" lg="8" md="10">
+            <p class="text-justify mb-4 mb-sm-5">
+                Później tu będzie content albo coś innego.
+            </p>
+        </b-col>
     </b-row>
 </template>
 

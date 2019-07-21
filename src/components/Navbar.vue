@@ -1,5 +1,5 @@
 <template>
-    <header :class="{'position-fixed w-100 h-100 overflow-auto': wXS || wSM, 'darken-background': slided && showCollapse, 'bg-transparent': !(slided && showCollapse)}" class="m-0 p-0 transition-fast">
+    <header :class="{'position-fixed w-100 h-100 overflow-auto': wXS || wSM, 'darken-background': slided && expanded, 'bg-transparent': !(slided && expanded)}" class="m-0 p-0 transition-fast">
         <b-navbar-toggle :aria-expanded="showCollapse ? 'true' : 'false'" @click="showCollapse = !showCollapse" class="d-md-none" target="navbar-collapse">
             <font-awesome-icon :class="{'text-white': slided && showCollapse}" class="transition-fast" icon="bars"></font-awesome-icon>
         </b-navbar-toggle>
@@ -79,6 +79,9 @@
     computed: {
       slided () {
         return this.scrollY > this.mainHeight - this.clientHeight
+      },
+      expanded () {
+        return this.showCollapse || this.wMD || this.wLG || this.wXL
       },
     },
     watch: {
