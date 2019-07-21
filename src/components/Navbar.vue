@@ -1,20 +1,28 @@
 <template>
-    <header class="sticky-top m-0 p-0">
-        <b-navbar :class="slided ? 'darken-background' : 'bg-transparent'" class="d-flex transition-fast pb-2" ref="navbar">
-            <b-row class="flex-fill flex-column flex-md-row" no-gutters>
-                <transition name="fade-scale">
-                    <b-col cols="12" md="2" v-show="slided">
-                        <b-navbar-brand class="d-flex m-0 mr-md-3" href="#">
-                            <img alt="logo" class="img-fluid w-50 mx-auto" src="@/assets/images/logo.png">
-                        </b-navbar-brand>
+    <header :class="{'position-fixed w-100 h-100 overflow-auto': wXS || wSM, 'darken-background': slided && expanded, 'bg-transparent': !(slided && expanded)}" class="m-0 p-0">
+        <b-navbar-toggle @click="clickMenu = !clickMenu" class="d-md-none" target="navbar-collapse">
+            <font-awesome-icon icon="bars"></font-awesome-icon>
+        </b-navbar-toggle>
+        <b-navbar class="d-flex transition-fast pb-2" ref="navbar" toggleable="md">
+            <b-collapse id="navbar-collapse" is-nav>
+                <b-row class="flex-fill flex-column flex-md-row" no-gutters>
+                    <transition name="fade-scale">
+                        <b-col :class="{'d-flex align-items-center': slided}" class="mx-auto" cols="8" md="2" v-show="slided">
+                            <b-navbar-brand class="d-flex mx-auto mr-md-3" href="#">
+                                <img alt="logo" class="img-fluid w-75 mx-auto" src="@/assets/images/logo.png">
+                            </b-navbar-brand>
+                        </b-col>
+                    </transition>
+                    <b-col class="d-flex mx-auto" cols="12" md="10">
+
+                        <b-navbar-nav align="between" class="flex-fill align-items-center d-flex flex-column flex-md-row" fill>
+                            <b-nav-item :class="{ light: slided }" :key="index" @click="scrollTo(link)" class="text-center font-weight-bold" href="#" v-for="(link, index) in links"><span class="transition-fast secondary-font">{{ link.name }}</span></b-nav-item>
+                        </b-navbar-nav>
+
                     </b-col>
-                </transition>
-                <b-col class="d-flex mx-auto" cols="12" md="10">
-                    <b-navbar-nav align="between" class="flex-fill align-items-center d-flex flex-column flex-md-row" fill>
-                        <b-nav-item :class="{ light: slided }" :key="index" @click="scrollTo(link)" class="text-center font-weight-bold" href="#" v-for="(link, index) in links"><span class="transition-fast secondary-font">{{ link.name }}</span></b-nav-item>
-                    </b-navbar-nav>
-                </b-col>
-            </b-row>
+                </b-row>
+            </b-collapse>
+
         </b-navbar>
     </header>
 </template>
@@ -25,6 +33,7 @@
     name: 'Navbar',
     data () {
       return {
+        clickMenu: false,
         scrollY: 0,
         mainHeight: 0,
         clientHeight: 0,
@@ -73,6 +82,10 @@
     computed: {
       slided () {
         return this.scrollY > this.mainHeight - this.clientHeight
+      },
+      expanded () {
+        document.querySelector('body').style.overflow = this.clickMenu && (this.wXS || this.wSM) ? 'hidden' : 'auto'
+        return this.clickMenu || this.wMD || this.wLG || this.wXL
       },
     },
   }
