@@ -5,12 +5,7 @@
         </headroom>
         <Navbar v-else/>
         <main>
-            <Main id="main"/>
-            <!--            <AboutProject id="about-project"/>-->
-            <AboutUs id="about-us"/>
-            <Blog id="blog"/>
-            <!--            <Gallery id="gallery"/>-->
-            <Place id="place"/>
+					<router-view></router-view>
         </main>
         <footer>
             <Contact id="contact"/>
@@ -20,26 +15,14 @@
 
 <script>
   import { headroom } from 'vue-headroom'
-  import Main from './components/Main'
   import Navbar from './components/Navbar'
-  // import AboutProject from './components/AboutProject'
-  // import Gallery from './components/Gallery'
-  import AboutUs from './components/AboutUs'
   import Contact from './components/Contact'
-  import Place from './components/Place'
-  import Blog from './components/Blog'
 
   export default {
     name: 'app',
     components: {
       Navbar,
-      Main,
-      // AboutProject,
-      // Gallery,
-      AboutUs,
       Contact,
-      Place,
-      Blog,
       headroom,
     },
     computed: {

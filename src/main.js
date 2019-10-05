@@ -13,6 +13,7 @@ import VueScrollTo from 'vue-scrollto'
 import VueParticles from 'vue-particles'
 import VueMediaQueryMixin from 'vue-media-query-mixin'
 import store from './store'
+import router from './router'
 
 // this part resolve an issue where the markers would not appear
 delete L.Icon.Default.prototype._getIconUrl
@@ -49,5 +50,6 @@ Vue.config.productionTip = false
 
 new Vue({
   store,
+	router,
   render: h => h(App),
 }).$mount('#app')
