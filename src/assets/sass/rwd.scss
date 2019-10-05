@@ -10,14 +10,20 @@
 	@for $i from 1 through 6 {
 		h#{$i}, .h#{$i} {
 			@include media-breakpoint-up($size) {
-				font-size: $value + 0.2 - ($i - 1) * 0.1 !important;
+				font-size: $value + 0.1 - ($i - 1) * 0.1 !important;
 			}
 		}
 	}
 	
-	span, p, li {
+	span, p, li, button, a {
 		@include media-breakpoint-up($size) {
-			font-size: $value * 0.6 + 0.15 !important;
+			font-size: $value * 0.5 + 0.15 !important;
+		}
+	}
+	
+	small {
+		@include media-breakpoint-up($size) {
+			font-size: ($value * 0.5 + 0.15) * 0.8 !important;
 		}
 	}
 }

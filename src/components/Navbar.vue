@@ -1,9 +1,9 @@
 <template>
-    <header :class="{'position-fixed w-100 h-100 overflow-auto': wXS || wSM, 'darken-background': slided && expanded, 'bg-transparent': !(slided && expanded)}" class="m-0 p-0 transition-fast">
+	<header :class="{'position-fixed w-100 overflow-auto': wXS || wSM, 'h-100 d-flex flex-column align-items-start': mobileExpanded,'darken-background': slided && expanded, 'bg-transparent': !(slided && expanded)}" class="m-0 p-0 transition-fast">
         <b-navbar-toggle :aria-expanded="showCollapse ? 'true' : 'false'" @click="showCollapse = !showCollapse" class="d-md-none" target="navbar-collapse">
             <font-awesome-icon :class="{'text-white': slided && showCollapse}" class="transition-fast" icon="bars"></font-awesome-icon>
         </b-navbar-toggle>
-        <b-navbar class="d-flex transition-fast pb-2" ref="navbar" toggleable="md">
+		<b-navbar :class="{'flex-fill align-self-center': mobileExpanded}" class="d-flex transition-fast pb-2" ref="navbar" toggleable="md">
             <b-collapse id="navbar-collapse" is-nav v-model="showCollapse">
                 <b-row class="flex-fill flex-column flex-md-row" no-gutters>
                     <transition name="fade-scale">
@@ -82,6 +82,9 @@
       },
       expanded () {
         return this.showCollapse || this.wMD || this.wLG || this.wXL
+      },
+      mobileExpanded () {
+        return this.expanded && (this.wXS || this.wSM)
       },
     },
     watch: {

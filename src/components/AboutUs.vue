@@ -1,7 +1,7 @@
 <template>
     <b-row class="pb-4 pb-sm-5" no-gutters>
         <b-col cols="12">
-            <h1 class="text-center my-4 my-sm-5 display-4">O nas</h1>
+					<h1 class="text-center my-4 my-sm-5">O nas</h1>
         </b-col>
         <b-col class="mx-auto" cols="11" lg="8" md="10">
             <p class="text-justify mb-4 mb-sm-5">
@@ -19,13 +19,13 @@
         </b-col>
         <b-col class="mx-auto text-black" cols="11" lg="8" md="10">
             <b-row>
-                <b-col class="d-flex" cols="6">
+							<b-col class="d-flex mb-3 mb-sm-0" cols="12" sm="6">
                     <b-button class="flex-fill" size="lg" v-b-modal.modal-vision variant="outline-primary">Wizja</b-button>
                     <b-modal centered hide-footer id="modal-vision" title="Wizja">
                         <p class="my-4">Hello from modal!</p>
                     </b-modal>
                 </b-col>
-                <b-col class="d-flex" cols="6">
+							<b-col class="d-flex" cols="12" sm="6">
                     <b-button class="flex-fill" size="lg" v-b-modal.modal-manifesto variant="outline-primary">Manifest</b-button>
                     <b-modal centered hide-footer id="modal-manifesto" title="Manifest">
                         <p class="my-4">Hello from modal!</p>
