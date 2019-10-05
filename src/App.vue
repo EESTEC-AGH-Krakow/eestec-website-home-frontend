@@ -8,6 +8,7 @@
             <Main id="main"/>
             <!--            <AboutProject id="about-project"/>-->
             <AboutUs id="about-us"/>
+            <Blog id="blog"/>
             <!--            <Gallery id="gallery"/>-->
             <Place id="place"/>
         </main>
@@ -26,6 +27,7 @@
   import AboutUs from './components/AboutUs'
   import Contact from './components/Contact'
   import Place from './components/Place'
+  import Blog from './components/Blog'
 
   export default {
     name: 'app',
@@ -37,6 +39,7 @@
       AboutUs,
       Contact,
       Place,
+      Blog,
       headroom,
     },
     computed: {
