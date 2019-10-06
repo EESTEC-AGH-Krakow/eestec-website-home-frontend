@@ -5,30 +5,36 @@
         </b-col>
         <b-col class="mx-auto" cols="11" lg="8" md="10">
 					<b-row>
-						<b-col :key="index" class="d-flex my-2" cols="12" sm="6" v-for="(article, index) in articles" xl="4">
-							<Article :article="article"/>
+						<b-col :key="article.id" class="d-flex my-2" cols="12" sm="6" v-for="article in articles">
+							<ArticleCard :article="article"/>
 						</b-col>
 					</b-row>
         </b-col>
-		<b-col class="d-flex mt-4 mt-sm-5" cols="12">
-			<b-button class="mx-auto" variant="primary">Wszystkie posty</b-button>
+		<b-col class="d-flex mt-4 mt-sm-5" cols="12" v-if="!hideButton">
+			<b-button :to="{name: 'blog'}" class="mx-auto" variant="primary">Wszystkie posty</b-button>
 		</b-col>
     </b-row>
 </template>
 
 <script>
-  import Article from './Article'
-  import articles from '@/../mock/truncatedArticles'
+  import ArticleCard from './ArticleCard'
 
   export default {
     name: 'Articles',
     data () {
       return {
-        articles: articles,
       }
     },
     components: {
-      Article,
+      ArticleCard,
+    },
+    props: {
+      articles: Array,
+      hideButton: {
+        type: Boolean,
+        default: false,
+
+      },
     },
   }
 </script>

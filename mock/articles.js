@@ -1,5 +1,6 @@
 export default [
 	{
+		id: 1,
 		author: 'Mateusz Piątkowski',
 		date: (new Date('2011-05-03 13:45')).getTime(),
 		title: 'Jak napisać aplikację w Vue',
@@ -11,6 +12,7 @@ export default [
 		mainImage: 'https://picsum.photos/800/500',
 	},
 	{
+		id: 2,
 		author: 'Aneta Wojciechowska',
 		date: (new Date('2012-05-03 20:00')).getTime(),
 		title: 'Jak napisać aplikację w Angular',
@@ -22,6 +24,7 @@ export default [
 		mainImage: 'https://photos.app.goo.gl/VBU62wMRApjLjtrR6',
 	},
 	{
+		id: 3,
 		author: 'XYZ',
 		date: (new Date('2012-12-03 14:45')).getTime(),
 		title: 'łosisi i jeiyem',
@@ -33,6 +36,7 @@ export default [
 		mainImage: 'https://photos.app.goo.gl/VBU62wMRApjLjtrR6',
 	},
 	{
+		id: 4,
 		author: 'Paweł Potaczała',
 		date: (new Date('2013-08-23 13:45')).getTime(),
 		title: 'Męski kok a\'la Michał Kilian',
@@ -44,6 +48,7 @@ export default [
 		mainImage: 'https://photos.app.goo.gl/VBU62wMRApjLjtrR6',
 	},
 	{
+		id: 5,
 		author: 'Kichał Milian',
 		date: (new Date('2019-05-03 13:45')).getTime(),
 		title: 'Trele morele',
@@ -55,6 +60,7 @@ export default [
 		mainImage: 'https://photos.app.goo.gl/VBU62wMRApjLjtrR6',
 	},
 	{
+		id: 6,
 		author: 'Pjooter Połeć',
 		date: (new Date('2019-05-03 13:45')).getTime(),
 		title: 'Smack yo bitch',
@@ -66,6 +72,7 @@ export default [
 		mainImage: 'https://photos.app.goo.gl/VBU62wMRApjLjtrR6',
 	},
 	{
+		id: 7,
 		author: 'Oskar Pawica',
 		date: (new Date('2019-05-03 13:45')).getTime(),
 		title: 'Jezus Maria',
@@ -77,6 +84,7 @@ export default [
 		mainImage: 'https://photos.app.goo.gl/VBU62wMRApjLjtrR6',
 	},
 	{
+		id: 8,
 		author: 'Natalia Czepiec',
 		date: (new Date('2019-05-03 13:45')).getTime(),
 		title: 'Tajemnice abcdef',
@@ -88,6 +96,7 @@ export default [
 		mainImage: 'https://photos.app.goo.gl/VBU62wMRApjLjtrR6',
 	},
 	{
+		id: 9,
 		author: 'Bartłomiej Głownia',
 		date: (new Date('2019-05-03 13:45')).getTime(),
 		title: 'Ruby czy Java',
@@ -99,6 +108,7 @@ export default [
 		mainImage: 'https://photos.app.goo.gl/VBU62wMRApjLjtrR6',
 	},
 	{
+		id: 10,
 		author: 'Michał Dziadkowiec',
 		date: (new Date('2019-05-03 13:45')).getTime(),
 		title: 'Jak zostać Pawłem Potaczałą',
@@ -110,6 +120,7 @@ export default [
 		mainImage: 'https://photos.app.goo.gl/VBU62wMRApjLjtrR6',
 	},
 	{
+		id: 11,
 		author: 'Mateusz Piątkowski',
 		date: (new Date('2019-05-03 13:45')).getTime(),
 		title: 'Jak zniszczyć sobie życie',

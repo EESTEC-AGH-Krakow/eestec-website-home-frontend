@@ -1,9 +1,8 @@
 <template>
 	<div>
-		<Main id="main"/>
 		<!--            <AboutProject id="about-project"/>-->
 		<AboutUs id="about-us"/>
-		<Articles id="article"/>
+		<Articles :articles="articles" id="article"/>
 		<!--            <Gallery id="gallery"/>-->
 		<Place id="place"/>
 	</div>
@@ -15,15 +14,16 @@
   // import AboutProject from './components/AboutProject'
   // import Gallery from './components/Gallery'
   import AboutUs from '../components/AboutUs'
-  import Main from '../components/Main'
+  import articles from '@/../mock/truncatedArticles'
 
   export default {
     name: 'Home',
     data () {
-      return {}
+      return {
+        articles: articles,
+      }
     },
     components: {
-      Main,
       // AboutProject,
       // Gallery,
       AboutUs,

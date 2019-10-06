@@ -1,5 +1,6 @@
 export default [
 	{
+		id: 1,
 		author: 'Mateusz Piątkowski',
 		date: (new Date('2011-05-03 13:45')).getTime(),
 		title: 'Jak napisać aplikację w Vue',
@@ -7,6 +8,7 @@ export default [
 		mainImage: 'https://picsum.photos/800/600',
 	},
 	{
+		id: 2,
 		author: 'Aneta Wojciechowska',
 		date: (new Date('2012-05-03 20:00')).getTime(),
 		title: 'Jak napisać aplikację w Angular',
@@ -14,6 +16,7 @@ export default [
 		mainImage: 'https://picsum.photos/800/600',
 	},
 	{
+		id: 3,
 		author: 'XYZ',
 		date: (new Date('2012-12-03 14:45')).getTime(),
 		title: 'łosisi i jeiyem',
@@ -21,6 +24,7 @@ export default [
 		mainImage: 'https://picsum.photos/800/600',
 	},
 	{
+		id: 4,
 		author: 'Paweł Potaczała',
 		date: (new Date('2013-08-23 13:45')).getTime(),
 		title: 'Męski kok a\'la Michał Kilian',
@@ -28,6 +32,7 @@ export default [
 		mainImage: 'https://picsum.photos/800/600',
 	},
 	{
+		id: 5,
 		author: 'Kichał Milian',
 		date: (new Date('2019-05-03 13:45')).getTime(),
 		title: 'Trele morele',
@@ -35,6 +40,7 @@ export default [
 		mainImage: 'https://picsum.photos/800/600',
 	},
 	{
+		id: 6,
 		author: 'Pjooter Połeć',
 		date: (new Date('2019-05-03 13:45')).getTime(),
 		title: 'Smack yo bitch',
