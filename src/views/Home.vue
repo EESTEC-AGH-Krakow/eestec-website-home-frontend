@@ -2,7 +2,7 @@
 	<div>
 		<!--            <AboutProject id="about-project"/>-->
 		<AboutUs id="about-us"/>
-		<Articles :articles="articles" id="article"/>
+		<Articles :articles="articles" id="articles"/>
 		<!--            <Gallery id="gallery"/>-->
 		<Place id="place"/>
 	</div>
