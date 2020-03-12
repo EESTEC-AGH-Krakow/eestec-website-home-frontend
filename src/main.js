@@ -3,8 +3,6 @@ import App from './App.vue'
 import './registerServiceWorker'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import { L, LMap, LMarker, LTileLayer, LTooltip } from 'vue2-leaflet'
-import 'leaflet/dist/leaflet.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -15,22 +13,9 @@ import VueMediaQueryMixin from 'vue-media-query-mixin'
 import store from './store'
 import router from './router'
 
-// this part resolve an issue where the markers would not appear
-delete L.Icon.Default.prototype._getIconUrl
-
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-  iconUrl: require('leaflet/dist/images/marker-icon.png'),
-  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
-})
-
 library.add(fas, fab)
 
-Vue.component('l-map', LMap)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.component('l-tile-layer', LTileLayer)
-Vue.component('l-marker', LMarker)
-Vue.component('l-tooltip', LTooltip)
 
 Vue.use(VueMediaQueryMixin, {
   framework: 'bootstrap',

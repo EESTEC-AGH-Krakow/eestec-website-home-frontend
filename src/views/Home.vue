@@ -1,19 +1,15 @@
 <template>
 	<div>
-		<!--            <AboutProject id="about-project"/>-->
 		<AboutUs id="about-us"/>
+		<Projects id="projects"/>
 		<Articles :articles="articles" id="articles"/>
-		<!--            <Gallery id="gallery"/>-->
-		<Place id="place"/>
 	</div>
 </template>
 
 <script>
-  import Place from '../components/Place'
   import Articles from '../components/Articles'
-  // import AboutProject from './components/AboutProject'
-  // import Gallery from './components/Gallery'
   import AboutUs from '../components/AboutUs'
+	import Projects from "../components/Projects"
   import articles from '@/../mock/truncatedArticles'
 
   export default {
@@ -24,10 +20,8 @@
       }
     },
     components: {
-      // AboutProject,
-      // Gallery,
       AboutUs,
-      Place,
+			Projects,
       Articles,
     },
   }
