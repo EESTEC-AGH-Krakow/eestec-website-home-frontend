@@ -1,5 +1,5 @@
 <template>
-	<header :class="{'position-fixed w-100 overflow-auto': wXS || wSM, 'h-100 d-flex flex-column align-items-start': mobileExpanded,'darken-background': slided && expanded, 'bg-transparent': !(slided && expanded)}" class="m-0 p-0 transition-fast">
+	<header :class="{'position-fixed w-100 overflow-auto': wXS || wSM, 'h-100 d-flex flex-column align-items-start darken-background': mobileExpanded, 'darken-background': slided && expanded, 'bg-transparent': !(slided && expanded || mobileExpanded) }" class="m-0 p-0 transition-fast">
 		<b-navbar-toggle :aria-expanded="showCollapse ? 'true' : 'false'" @click="showCollapse = !showCollapse" class="d-md-none" target="navbar-collapse">
 			<font-awesome-icon :class="{'text-white': slided && showCollapse}" class="transition-fast" icon="bars"></font-awesome-icon>
 		</b-navbar-toggle>
