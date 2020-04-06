@@ -1,17 +1,12 @@
 <template>
-	<b-row class="pb-4 pb-sm-5 text-black" no-gutters>
-		<b-col cols="12">
-			<h1 class="text-center my-4 my-sm-5">Projekty</h1>
-		</b-col>
-		<b-col class="mx-auto" cols="11" lg="8" md="10">
-			<Carousel3d v-bind="carouselOptions">
-				<Slide :key="index" :index="index" class="d-flex" v-for="(project, index) in projects">
-					<template slot-scope="{ isCurrent }">
-						<b-img :src="project.image" :alt="project.name" fluid @click="isCurrent ? displayModal(project) : null" />
-					</template>
-				</Slide>
-			</Carousel3d>
-		</b-col>
+	<Layout title="Projekty">
+		<Carousel3d v-bind="carouselOptions">
+			<Slide :key="index" :index="index" class="d-flex" v-for="(project, index) in projects">
+				<template slot-scope="{ isCurrent }">
+					<b-img :src="project.image" :alt="project.name" fluid @click="isCurrent ? displayModal(project) : null" />
+				</template>
+			</Slide>
+		</Carousel3d>
 		<b-modal id="project-modal" ok-only centered scrollable hide-header button-size="sm">
 			<b-container fluid>
 				<b-row>
@@ -26,11 +21,12 @@
 				</b-row>
 			</b-container>
 		</b-modal>
-	</b-row>
+	</Layout>
 </template>
 
 <script>
 import { Carousel3d, Slide } from "vue-carousel-3d";
+import Layout from "./Layout";
 
 export default {
 	name: "Projects",
@@ -78,6 +74,7 @@ export default {
 		};
 	},
 	components: {
+		Layout,
 		Carousel3d,
 		Slide
 	},

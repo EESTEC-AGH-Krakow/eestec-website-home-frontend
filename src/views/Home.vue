@@ -1,9 +1,9 @@
 <template>
-	<div>
+	<b-container fluid>
 		<AboutUs id="about-us"/>
 		<Projects id="projects"/>
 		<Articles :articles="articles" id="articles"/>
-	</div>
+	</b-container>
 </template>
 
 <script>
