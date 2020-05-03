@@ -1,4 +1,4 @@
-# eestec-main-page
+# eestec-website-home-frontend
 
 ## Project setup
 ```
