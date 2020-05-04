@@ -20,3 +20,6 @@ before_script:
 
 script:
 - npm run build
+
+after_script:
+- scp -r ./dist eestec@$SERVER_ADDRESS:~/domains/dev.eestec.pl/public_nodejs
