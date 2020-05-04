@@ -1,4 +1,6 @@
 language: node_js
+os: linux
+dist: xenial
 
 node_js:
 - stable
@@ -25,7 +27,7 @@ deploy:
   - provider: script
     script: deploy.sh $DEV_LOCATION
     on:
-      branch: /^feature.*$/
+      branch: feature/travis-improvement
   - provider: script
     script: deploy.sh $PRD_LOCATION
     on:
