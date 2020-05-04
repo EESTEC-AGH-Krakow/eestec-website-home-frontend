@@ -1,21 +1,21 @@
 #!/bin/bash
 
-echo "start decrypting file ..."
+printf "start decrypting file ...\n"
 openssl aes-256-cbc -K $encrypted_dfdcfd5172af_key -iv $encrypted_dfdcfd5172af_iv -in ./iac/deploy_key.enc -out ./deploy_key -d
 
-echo "\nstart the ssh-agent to run ssh commands"
+printf "\nstart the ssh-agent to run ssh commands ...\n"
 eval "$(ssh-agent -s)"
 
-echo "\nchange permissions on decrypted file to avoid warnings."
+printf "\nchange permissions on decrypted file to avoid warnings ...\n"
 chmod 600 ./deploy_key
 
-echo "\navoid Travis asking if we want to \"check\" the identity of target host (VPS)"
+printf "\navoid Travis asking if we want to \"check\" the identity of target host (VPS) ...\n"
 echo -e "Host $SERVER_ADDRESS\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-echo "\nadd the decrpyted file as preferred ssh RSA key."
+printf "\nadd the decrpyted file as preferred ssh RSA key ...\n"
 ssh-add ./deploy_key
 
-echo "\nrun the pwd command on the deployment server using the decrypted file as \"identity\" file (RSA Key)"
+printf "\nrun the pwd command on the deployment server using the decrypted file as \"identity\" file (RSA Key) ...\n"
 ssh -i ./deploy_key "$USERNAME"@"$SERVER_ADDRESS" pwd
 
-echo "\nconnectivity test has been completed successfully!"
+printf "\nconnectivity test has been completed successfully!"

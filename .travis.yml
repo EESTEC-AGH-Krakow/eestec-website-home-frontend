@@ -14,4 +14,4 @@ deploy:
     skip_cleanup: true
     script: bash ./iac/deploy.sh $PRD_LOCATION
     on:
-      branch: prd
+      branch: master
