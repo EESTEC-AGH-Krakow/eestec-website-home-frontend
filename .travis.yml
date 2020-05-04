@@ -25,7 +25,7 @@ deploy:
   - provider: script
     script: deploy.sh $DEV_LOCATION
     on:
-      branch: /^feature-.*$/
+      branch: /^feature.*$/
   - provider: script
     script: deploy.sh $PRD_LOCATION
     on:
