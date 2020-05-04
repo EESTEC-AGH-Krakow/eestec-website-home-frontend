@@ -6,7 +6,7 @@ node_js:
 - stable
 
 env:
-- SERVER_ADDRESS=s3.mydevil.net USERNAME=eestec DEV_LOCATION=~/domains/dev.eestec.pl/public_nodejs PRD_LOCATION=~/domains/dev.eestec.pl/public_nodejs/prd
+- SERVER_ADDRESS=s3.mydevil.net USERNAME=eestec DEV_LOCATION=/domains/dev.eestec.pl/public_nodejs PRD_LOCATION=/domains/dev.eestec.pl/public_nodejs/prd
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_dfdcfd5172af_key -iv $encrypted_dfdcfd5172af_iv
@@ -16,9 +16,6 @@ before_install:
   - echo -e "Host $SERVER_ADDRESS\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - ssh-add ./deploy_key
   - ssh -i ./deploy_key eestec@$SERVER_ADDRESS pwd
-
-before_script:
-- npm ci
 
 script:
 - npm run build

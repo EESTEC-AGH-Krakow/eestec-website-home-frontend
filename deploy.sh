@@ -2,4 +2,4 @@
 
 LOCATION=$1
 
-scp -r ./dist "$USERNAME"@"$SERVER_ADDRESS":"$LOCATION"
+scp -r ./dist "$USERNAME"@"$SERVER_ADDRESS":~"$LOCATION"
