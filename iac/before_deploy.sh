@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "start decrypting file ..."
-openssl aes-256-cbc -K $encrypted_dfdcfd5172af_key -iv $encrypted_dfdcfd5172af_iv -in ./deploy_key.enc -out ./deploy_key -d
+openssl aes-256-cbc -K $encrypted_dfdcfd5172af_key -iv $encrypted_dfdcfd5172af_iv -in ./iac/deploy_key.enc -out ./deploy_key -d
 
 echo "start the ssh-agent to run ssh commands"
 eval "$(ssh-agent -s)"
