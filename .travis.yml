@@ -5,6 +5,9 @@ node_js:
 
 env:
 - SERVER_ADDRESS: s3.mydevil.net
+- USERNAME: eestec
+- DEV_LOCATION: ~/domains/dev.eestec.pl/public_nodejs
+- PRD_LOCATION: ~/domains/dev.eestec.pl/public_nodejs/prd
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_dfdcfd5172af_key -iv $encrypted_dfdcfd5172af_iv
@@ -21,5 +24,12 @@ before_script:
 script:
 - npm run build
 
-after_script:
-- scp -r ./dist eestec@$SERVER_ADDRESS:~/domains/dev.eestec.pl/public_nodejs
+deploy:
+  - provider: mydevil
+    script: deploy.sh $DEV_LOCATION
+    on:
+      branch: dev
+  - provider: mydevil
+    script: deploy.sh $PRD_LOCATION
+    on:
+      branch: prd
