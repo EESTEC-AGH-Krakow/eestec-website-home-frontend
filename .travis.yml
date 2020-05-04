@@ -25,10 +25,12 @@ script:
 
 deploy:
   - provider: script
-    script: deploy.sh $DEV_LOCATION
+    skip_cleanup: true
+    script: bash ./deploy.sh $DEV_LOCATION
     on:
       branch: feature/travis-improvement
   - provider: script
-    script: deploy.sh $PRD_LOCATION
+    skip_cleanup: true
+    script: bash ./deploy.sh $PRD_LOCATION
     on:
       branch: prd
