@@ -22,11 +22,11 @@ script:
 - npm run build
 
 deploy:
-  - provider: mydevil
+  - provider: script
     script: deploy.sh $DEV_LOCATION
     on:
-      branch: dev
-  - provider: mydevil
+      branch: /^feature-.*$/
+  - provider: script
     script: deploy.sh $PRD_LOCATION
     on:
       branch: prd
