@@ -1,5 +1,5 @@
 # eestec-website-home-frontend
-[![Build Status](https://travis-ci.org/EESTEC-AGH-Krakow/eestec-website-home-frontend.svg?branch=master)](https://travis-ci.com/EESTEC-AGH-Krakow/eestec-website-home-frontend)
+[![Build Status](https://travis-ci.org/EESTEC-AGH-Krakow/eestec-website-home-frontend.svg?branch=master)](https://travis-ci.org/EESTEC-AGH-Krakow/eestec-website-home-frontend)
 ## Project setup
 ```
 npm install
