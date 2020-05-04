@@ -1,24 +1,17 @@
 language: node_js
 os: linux
 dist: xenial
-
-node_js:
-- stable
-
-env:
-- SERVER_ADDRESS=s3.mydevil.net USERNAME=eestec DEV_LOCATION=/domains/dev.eestec.pl/public_nodejs PRD_LOCATION=/domains/dev.eestec.pl/public_nodejs/prd
-
-script:
-- npm run build
-
+node_js: stable
+script: npm run build
+before_deploy: ./iac/before_deploy.sh
 deploy:
   - provider: script
     skip_cleanup: true
-    script: bash ./deploy.sh $DEV_LOCATION
+    script: bash ./iac/deploy.sh $DEV_LOCATION
     on:
       branch: feature/travis-improvement
   - provider: script
     skip_cleanup: true
-    script: bash ./deploy.sh $PRD_LOCATION
+    script: bash ./iac/deploy.sh $PRD_LOCATION
     on:
       branch: prd
