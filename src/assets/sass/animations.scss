@@ -42,3 +42,21 @@
 	opacity: 0 !important;
 	transform: translateX(-100%) !important;
 }
+
+@keyframes loading-sinus-rect {
+	0% {
+		transform: translateY(-100%);
+	}
+	40% {
+		transform: translateY(-10%);
+	}
+	50% {
+		transform: translateY(0%);
+	}
+	60% {
+		transform: translateY(10%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}

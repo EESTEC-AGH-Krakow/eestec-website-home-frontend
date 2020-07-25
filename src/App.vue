@@ -1,39 +1,42 @@
 <template>
 	<b-container class="p-0" fluid id="app">
-		<headroom class="h-0" id="headroom" v-if="largerDevice">
-			<Navbar/>
-		</headroom>
-		<Navbar v-else/>
-		<main>
-			<Main id="main"/>
-			<router-view></router-view>
-		</main>
-		<footer>
-			<Contact id="contact"/>
-		</footer>
+		<!--		<headroom class="h-0" id="headroom" v-if="largerDevice">-->
+		<!--			<Navbar/>-->
+		<!--		</headroom>-->
+		<!--		<Navbar v-else/>-->
+		<!--		<main>-->
+		<!--			<Main id="main"/>-->
+		<!--			<router-view></router-view>-->
+		<!--		</main>-->
+		<!--		<footer>-->
+		<!--			<Contact id="contact"/>-->
+		<!--		</footer>-->
+		<Loading></Loading>
 	</b-container>
 </template>
 
 <script>
-  import { headroom } from 'vue-headroom'
-  import Navbar from './components/Navbar'
-  import Contact from './components/Contact'
-  import Main from './components/Main'
+	import {headroom} from 'vue-headroom';
+	import Navbar from './components/Navbar';
+	import Contact from './components/Contact';
+	import Main from './components/Main';
+	import Loading from './components/Loading';
 
-  export default {
-    name: 'app',
-    components: {
-      Main,
-      Navbar,
-      Contact,
-      headroom,
-    },
-    computed: {
-      largerDevice () {
-        return this.wMD || this.wLG || this.wXL
-      },
-    },
-  }
+	export default {
+		name: 'app',
+		components: {
+			Main,
+			Navbar,
+			Contact,
+			headroom,
+			Loading
+		},
+		computed: {
+			largerDevice() {
+				return this.wMD || this.wLG || this.wXL;
+			},
+		},
+	};
 </script>
 
 <style lang="scss">

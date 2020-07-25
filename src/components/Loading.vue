@@ -1,7 +1,5 @@
 <template>
-    <div class="position-absolute">
-        <SVGLoading></SVGLoading>
-    </div>
+	<SVGLoading class="loading-svg"></SVGLoading>
 </template>
 
 <script>
@@ -19,5 +17,19 @@
 </script>
 
 <style lang="scss" scoped>
+	.loading-svg {
+		width: 100vw;
+		height: 100vh;
 
+		/deep/ {
+			.sinus {
+				fill: transparent;
+			}
+
+			.sinus-rect {
+				animation: loading-sinus-rect 1.5s ease-in-out infinite;
+				fill: $red;
+			}
+		}
+	}
 </style>
