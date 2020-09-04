@@ -16,27 +16,35 @@ module.exports = {
 
 	chainWebpack: config => {
 		config.module
-			.rule'vue'")
-			'vue-loader'ader")
-		'vue-loader'e-loader")
+			.rule("vue")
+			.use("vue-loader")
+			.loader("vue-loader")
 			.tap(options => {
 				merge(options, {
-					transformToRequir'src'						img: "sr'xlink:href'age: "x'b-img'ef'src'				"b-'b-img-lazy'
-		'src'b-'blank-src'["src", 'b-card'rc'img-src'	"b-car'b-card-img'",'img-src'-card-i'b-carousel-slide'		'img-src'usel-sl'b-embed'g-'src',
-					,	"b-embed": "src"
+					transformToRequire: {
+						img: "src",
+						image: "xlink:href",
+						"b-img": "src",
+						"b-img-lazy": ["src", "blank-src"],
+						"b-card": "img-src",
+						"b-card-img": "img-src",
+						"b-carousel-slide": "img-src",
+						"b-embed": "src"
 					}
 				});
 			});
 
-		const svg'svg'= config.module.rule("svg");
+		const svgRule = config.module.rule("svg");
 
-		svgRule.use'vue-svg-loader'gRule.use'vue-svg-loader'").loader("vue-svg-loader");
+		svgRule.uses.clear();
+
+		svgRule.use("vue-svg-loader").loader("vue-svg-loader");
 	},
 
 	publicPath: undefined,
-	outputDi'assets'ined,
+	outputDir: undefined,
 	assetsDir: "assets",
 	runtimeCompiler: true,
-	productionSourceMap: undef,ined,
+	productionSourceMap: undefined,
 	parallel: undefined
 };
