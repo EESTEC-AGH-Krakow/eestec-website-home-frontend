@@ -25,11 +25,11 @@
 </template>
 
 <script>
-import { Carousel3d, Slide } from "vue-carousel-3d";
-import Layout from "./Layout";
+import {Carousel3d, Slide} from 'vue-carousel-3d';
+import Layout from './PageLayout';
 
 export default {
-	name: "Projects",
+	name: 'Projects',
 	data() {
 		return {
 			currentProject: {},

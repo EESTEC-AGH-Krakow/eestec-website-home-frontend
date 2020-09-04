@@ -18,16 +18,17 @@
 </template>
 
 <script>
-	import Layout from "./Layout";
-	export default {
-		name: 'Contact',
-		components: {Layout},
-		data () {
-			return {
-				publicPath: process.env.BASE_URL,
-			}
-		},
-	}
+import Layout from './PageLayout';
+
+export default {
+	name: 'Contact',
+	components: {Layout},
+	data() {
+		return {
+			publicPath: process.env.BASE_URL,
+		};
+	},
+};
 </script>
 
 <style lang="scss" scoped>
