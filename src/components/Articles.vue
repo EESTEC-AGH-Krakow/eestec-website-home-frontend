@@ -14,17 +14,17 @@
 </template>
 
 <script>
-import ArticleCard from "./ArticleCard";
-import Layout from "./Layout";
+import ArticleCard from './ArticleCard';
+import Layout from './PageLayout';
 
 export default {
-	name: "Articles",
+	name: 'Articles',
 	data() {
 		return {};
 	},
 	components: {
 		Layout,
-		ArticleCard
+		ArticleCard,
 	},
 	props: {
 		articles: Array,
