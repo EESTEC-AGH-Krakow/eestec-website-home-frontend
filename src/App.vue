@@ -1,38 +1,21 @@
 <template>
 	<b-container class="p-0" fluid id="app">
-		<Loading v-if="isLoading"></Loading>
-		<template v-else>
-			<headroom class="h-0" id="headroom" v-if="largerDevice">
-				<Navbar/>
-			</headroom>
-			<Navbar v-else/>
-			<main>
-				<Main id="main"/>
-				<router-view></router-view>
-			</main>
-			<footer>
-				<Contact id="contact"/>
-			</footer>
-		</template>
+		<transition mode="out-in" name="fade">
+			<component :is="view"></component>
+		</transition>
 	</b-container>
 </template>
 
 <script>
-import {headroom} from 'vue-headroom';
-import Navbar from './components/Navbar';
-import Contact from './components/Contact';
-import Main from './components/Main';
 import Loading from './components/Loading';
+import AppLayout from './components/AppLayout';
 import {mapActions, mapState} from 'vuex';
 
 export default {
 	name: 'app',
 	components: {
-		Main,
-		Navbar,
-		Contact,
-		headroom,
 		Loading,
+		AppLayout,
 	},
 	mounted() {
 		this.changeLoading();
@@ -42,18 +25,16 @@ export default {
 		...mapActions(['changeLoading', 'getPosts']),
 	},
 	computed: {
-		largerDevice() {
-			return this.wMD || this.wLG || this.wXL;
-		},
 		...mapState(['isLoading']),
+		view() {
+			return this.isLoading ? 'Loading' : 'AppLayout';
+		},
 	},
 };
 </script>
 
 <style lang="scss">
-/*@import url('assets/fonts/Inter/inter.scss');*/
 @import url('assets/fonts/Elegant/elegant.scss');
-/*@import url('assets/fonts/Cinzel/cinzel.scss');*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
 * {

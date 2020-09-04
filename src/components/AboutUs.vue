@@ -33,12 +33,13 @@
 </template>
 
 <script>
-import Layout from "./Layout";
+import Layout from './PageLayout';
+
 export default {
-	name: "AboutUs",
+	name: 'AboutUs',
 	components: {
-		Layout
-	}
+		Layout,
+	},
 };
 </script>
 

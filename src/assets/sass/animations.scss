@@ -1,46 +1,8 @@
-.slide-fade-header-enter-active, .slide-fade-header-leave-active {
-	transition: $animation-transition !important;
-	z-index: $navbar-index;
-}
-
-.slide-fade-header-enter, .slide-fade-header-leave-to {
-	@include media-breakpoint-only(xs) {
-		transform: translateX(-100%) !important;
-	}
-	transform: translateY(-100%) !important;
-	opacity: 0 !important;
-}
-
-//---------------------------------------
-
 .fade-enter-active, .fade-leave-active {
-	transition: $animation-transition;
+	transition: opacity .5s ease;
 }
-
 .fade-enter, .fade-leave-to {
 	opacity: 0;
-}
-
-//---------------------------------------
-
-.fade-scale-enter-active, .fade-scale-leave-active {
-	transition: $transition-fast;
-}
-
-.fade-scale-enter, .fade-scale-leave-to {
-	opacity: 0 !important;
-	transform: scale(0.9) !important;
-}
-
-//---------------------------------------
-
-.fade-slide-horizontal-active, .fade-slide-horizontal-leave-active {
-	transition: $animation-transition;
-}
-
-.fade-slide-horizontal-enter, .fade-slide-horizontal-leave-to {
-	opacity: 0 !important;
-	transform: translateX(-100%) !important;
 }
 
 @keyframes loading-sinus-rect {
