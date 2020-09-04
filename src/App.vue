@@ -23,7 +23,7 @@ import Navbar from './components/Navbar';
 import Contact from './components/Contact';
 import Main from './components/Main';
 import Loading from './components/Loading';
-import {mapState, mapActions} from 'vuex';
+import {mapActions, mapState} from 'vuex';
 
 export default {
 	name: 'app',
@@ -35,16 +35,16 @@ export default {
 		Loading,
 	},
 	mounted() {
-		this.changeLoading()
+		this.changeLoading();
 	},
 	methods: {
-		...mapActions(['changeLoading'])
+		...mapActions(['changeLoading']),
 	},
 	computed: {
 		largerDevice() {
 			return this.wMD || this.wLG || this.wXL;
 		},
-		...mapState(['isLoading'])
+		...mapState(['isLoading']),
 	},
 };
 </script>

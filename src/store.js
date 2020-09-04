@@ -1,22 +1,22 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from "vue";
+import Vuex from "vuex";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		isLoading: true,
+		isLoading: true
 	},
 	mutations: {
 		loading(state, payload) {
 			state.isLoading = payload;
-		},
+		}
 	},
 	actions: {
-		changeLoading({commit}) {
+		changeLoading({ commit }) {
 			setTimeout(() => {
-				commit('loading', false);
+				commit("loading", false);
 			}, 3000);
-		},
-	},
+		}
+	}
 });
