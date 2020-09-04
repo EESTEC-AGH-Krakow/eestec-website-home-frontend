@@ -35,7 +35,7 @@ export default {
 		Loading,
 	},
 	mounted() {
-
+		this.changeLoading()
 	},
 	methods: {
 		...mapActions(['changeLoading'])
