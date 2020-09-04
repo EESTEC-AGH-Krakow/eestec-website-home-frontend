@@ -19,9 +19,10 @@ export default {
 	},
 	mounted() {
 		this.changeLoading();
+		this.getPosts();
 	},
 	methods: {
-		...mapActions(['changeLoading']),
+		...mapActions(['changeLoading', 'getPosts']),
 	},
 	computed: {
 		...mapState(['isLoading']),
