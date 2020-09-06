@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueScrollTo from 'vue-scrollto'
 import VueParticles from 'vue-particles'
 import VueMediaQueryMixin from 'vue-media-query-mixin'
-import store from './store'
+import store from './store/index.store'
 import router from './router'
 
 library.add(fas, fab)
