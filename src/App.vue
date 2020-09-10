@@ -21,7 +21,7 @@ export default {
 		this.changeLoading();
 	},
 	methods: {
-		...mapActions({ changeLoading: "changeLoading", getPayload: "news/getPaginationPayload" })
+		...mapActions({ changeLoading: "changeLoading" })
 	},
 	computed: {
 		...mapState(["isLoading"]),
