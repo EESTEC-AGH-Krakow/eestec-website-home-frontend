@@ -19,7 +19,6 @@ export default {
 	},
 	mounted() {
 		this.changeLoading();
-		this.getPayload();
 	},
 	methods: {
 		...mapActions({ changeLoading: "changeLoading", getPayload: "news/getPaginationPayload" })
