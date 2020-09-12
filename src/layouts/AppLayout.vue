@@ -32,10 +32,6 @@ export default {
 		largerDevice() {
 			return this.wMD || this.wLG || this.wXL;
 		},
-	},
+	}
 };
 </script>
-
-<style scoped>
-
-</style>

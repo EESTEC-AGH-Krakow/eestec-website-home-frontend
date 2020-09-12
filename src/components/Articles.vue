@@ -15,7 +15,7 @@
 
 <script>
 import ArticleCard from './ArticleCard';
-import Layout from './PageLayout';
+import Layout from '../layouts/PageLayout';
 
 export default {
 	name: 'Articles',

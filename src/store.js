@@ -1,6 +1,6 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import axios from "axios";
+import Vue from 'vue';
+import Vuex from 'vuex';
+import axios from 'axios';
 
 Vue.use(Vuex);
 
@@ -18,18 +18,19 @@ export default new Vuex.Store({
 		}
 	},
 	actions: {
-		changeLoading({ commit }) {
+		loadPage({ commit }) {
+			commit('loading', true);
 			setTimeout(() => {
-				commit("loading", false);
+				commit('loading', false);
 			}, 3000);
 		},
 		getPosts({ commit }) {
 			axios({
-				method: "get",
-				url: `${process.env.VUE_APP_BACKEND_API_HOST_URL}/posts&categories=25`
+				method: 'get',
+				url: `${process.env.VUE_APP_BACKEND_API_HOST_URL}/posts&categories=,25`
 			})
 				.then(res => res.data.map(({ title, date, content }) => ({ title, date, content })))
-				.then(posts => commit("loadPosts", posts));
+				.then(posts => commit('loadPosts', posts));
 		}
 	}
 });
