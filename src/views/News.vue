@@ -6,22 +6,20 @@
 </template>
 
 <script>
-  import Articles from '../components/Articles'
-  import articles from '@/../mock/truncatedArticles'
+import Articles from '../components/Articles';
+import articles from '@/../mock/truncatedArticles';
 
-  export default {
-    name: 'Blog',
-    data () {
-      return {
-        articles: articles,
-      }
-    },
-    components: {
-      Articles,
-    },
-  }
+export default {
+	name: 'Blog',
+	data() {
+		return {
+			articles: articles,
+		};
+	},
+	components: {
+		Articles,
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

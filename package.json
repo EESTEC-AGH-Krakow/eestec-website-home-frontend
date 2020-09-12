@@ -7,7 +7,8 @@
 		"build": "vue-cli-service build",
 		"lint": "vue-cli-service lint",
 		"inspect": "vue-cli-service inspect",
-		"start": "node app.js"
+		"start": "node app.js",
+		"pretty": "prettier"
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.9.2",
@@ -85,5 +86,17 @@
 		"> 1%",
 		"last 2 versions",
 		"not ie <= 8"
-	]
+	],
+	"prettier": {
+		"singleQuote": true
+	},
+	"gitHooks": {
+		"pre-commit": "lint-staged"
+	},
+	"lint-staged": {
+		"*.{js,vue,scss}": [
+			"npm run lint",
+			"git add"
+		]
+	}
 }

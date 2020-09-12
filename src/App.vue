@@ -8,7 +8,7 @@
 
 <script>
 import Loading from "./components/Loading";
-import AppLayout from "./components/AppLayout";
+import AppLayout from "./layouts/AppLayout";
 import { mapActions, mapState } from "vuex";
 
 export default {
@@ -18,34 +18,24 @@ export default {
 		AppLayout
 	},
 	mounted() {
-		this.changeLoading();
+		this.loadPage();
 	},
 	methods: {
-		...mapActions({ changeLoading: "changeLoading" })
+		...mapActions(['loadPage']),
 	},
 	computed: {
 		...mapState(["isLoading"]),
 		view() {
-			return this.isLoading ? "Loading" : "AppLayout";
-		}
-	}
+			return this.isLoading ? 'Loading' : 'AppLayout';
+		},
+	},
 };
 </script>
 
 <style lang="scss">
-@import url("assets/fonts/Elegant/elegant.scss");
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap");
-
-* {
-	box-sizing: border-box;
-	@extend .second-font;
-}
-
 html,
 body {
-	margin: 0;
-	padding: 0;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 #app {
@@ -57,38 +47,5 @@ body {
 
 main {
 	flex: 1 0 auto;
-}
-
-a {
-	&:hover {
-		text-decoration: none;
-	}
-}
-
-@for $i from 1 through 6 {
-	h#{$i} {
-		@extend .font-weight-bold;
-	}
-}
-
-.flip-card__top,
-.flip-card__bottom,
-.flip-card__back,
-.flip-card__back-bottom {
-	&,
-	&::before {
-		width: 5em !important;
-	}
-}
-
-.card {
-	&,
-	&-img-top {
-		@extend .rounded-0;
-	}
-}
-
-.modal-content {
-	@extend .rounded-0;
 }
 </style>

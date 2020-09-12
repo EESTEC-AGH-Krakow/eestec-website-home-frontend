@@ -1,0 +1,51 @@
+@import 'partials/custom_variables';
+
+// Color system
+
+$black: #000;
+$red: #E52A30;
+$red-lighter: #FA4952;
+$red-light: #FC7279;
+$red-darker: #C10710;
+$red-dark: #990008;
+
+$colors: (
+	black: $black,
+	red: $red,
+	red-lighter: $red-lighter,
+	red-light: $red-light,
+	red-darker: $red-darker,
+	red-dark: $red-dark
+);
+
+$theme-colors: (
+	primary: $red-dark,
+	secondary: $red
+);
+
+// Options
+
+$enable-rounded: false;
+$enable-responsive-font-sizes: true;
+
+// Sizes
+
+$sizes: (
+	0: 0%
+);
+
+// Body
+
+$body-bg: $body-bg;
+
+// Links
+
+$link-color: $red-light;
+
+// Components
+
+$embed-responsive-aspect-ratios: ();
+
+// Typography
+
+$font-family-base: 'Roboto', sans-serif;

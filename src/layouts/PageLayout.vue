@@ -1,9 +1,9 @@
 <template>
-	<b-row class="pb-4 pb-sm-5 text-black" no-gutters>
+	<b-row class="pb-4 pb-sm-5" no-gutters>
 		<b-col cols="12">
 			<h2 class="text-center my-4 my-sm-5">{{ title }}</h2>
 		</b-col>
-		<b-col class="mx-auto" cols="11" lg="8" md="10">
+		<b-col class="mx-auto" cols="11" md="10" xl="8">
 			<slot></slot>
 		</b-col>
 	</b-row>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-	name: "Layout",
+	name: 'Layout',
 	components: {},
 	data() {
 		return {};
@@ -19,8 +19,8 @@ export default {
 	props: {
 		title: {
 			required: true,
-			type: String
-		}
+			type: String,
+		},
 	},
 	methods: {},
 	computed: {},

@@ -1,5 +1,9 @@
-@import "partials/variables";
-@import "partials/extends";
-@import "partials/functions";
-@import "partials/mixins";
-@import "partials/base";
+@import 'partials/mixins';
+@import 'partials/base';
+
+@for $i from 1 through 6 {
+	h#{$i},
+	.h#{$i} {
+		font-weight: bold;
+	}
+}

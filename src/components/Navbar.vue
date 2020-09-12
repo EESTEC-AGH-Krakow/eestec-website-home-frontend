@@ -1,25 +1,17 @@
 <template>
-	<header>
-
-	</header>
+	<header></header>
 </template>
 
 <script>
 export default {
-	name: "Navbar",
+	name: 'Navbar',
 	data() {
-		return {}
+		return {};
 	},
-	methods: {
-	},
-	computed: {
-
-	},
-	watch: {
-	}
+	methods: {},
+	computed: {},
+	watch: {},
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
