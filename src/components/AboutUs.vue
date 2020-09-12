@@ -8,38 +8,22 @@
 				</p>
 			</b-col>
 			<b-col class="mx-auto" cols="12">
-				<p class="text-justify mb-4 mb-sm-5">
+				<p class="text-justify">
 					Później tu będzie content albo coś innego.
 				</p>
-			</b-col>
-			<b-col class="mx-auto text-black" cols="12">
-				<b-row>
-					<b-col class="d-flex mb-3 mb-sm-0" cols="12" sm="6">
-						<b-button class="flex-fill" size="lg" v-b-modal.modal-vision variant="outline-primary">Wizja</b-button>
-						<b-modal centered hide-footer id="modal-vision" title="Wizja">
-							<p class="my-4">Hello from modal!</p>
-						</b-modal>
-					</b-col>
-					<b-col class="d-flex" cols="12" sm="6">
-						<b-button class="flex-fill" size="lg" v-b-modal.modal-manifesto variant="outline-primary">Manifest</b-button>
-						<b-modal centered hide-footer id="modal-manifesto" title="Manifest">
-							<p class="my-4">Hello from modal!</p>
-						</b-modal>
-					</b-col>
-				</b-row>
 			</b-col>
 		</b-row>
 	</Layout>
 </template>
 
 <script>
-import Layout from './PageLayout';
+import Layout from '../layouts/PageLayout';
 
 export default {
 	name: 'AboutUs',
 	components: {
 		Layout,
-	},
+	}
 };
 </script>
 

@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from './views/Home';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
 	mode: 'history',
@@ -11,17 +11,17 @@ export default new Router({
 		{
 			path: '/',
 			name: 'home',
-			component: Home,
+			component: Home
 		},
 		{
 			path: '/news',
 			name: 'news',
-			component: () => import(/* webpackChunkName: "news" */ './views/News.vue'),
+			component: () => import(/* webpackChunkName: "news" */ './views/News.vue')
 		},
 		{
 			path: '/news/:id',
 			name: 'post',
-			component: () => import(/* webpackChunkName: "article" */ './views/Post.vue'),
-		},
-	],
-})
+			component: () => import(/* webpackChunkName: "post" */ './views/Post.vue')
+		}
+	]
+});

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import Layout from './PageLayout';
+import Layout from '../layouts/PageLayout';
 
 export default {
 	name: 'Contact',
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .copyright {
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    }
+.copyright {
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
 </style>

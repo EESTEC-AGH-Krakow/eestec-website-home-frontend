@@ -1,26 +1,5 @@
-.first-font {
-	//font-family: 'Inter', sans-serif !important;
-	font-family: 'Roboto', sans-serif !important;
-}
-
 .second-font {
-	//font-family: 'Elegant', sans-serif !important;
 	font-family: 'Montserrat', sans-serif !important;
-}
-
-.third-font {
-	//font-family: 'Cinzel', sans-serif !important;
-	font-family: 'Elegant', sans-serif !important;
-	//font-family: 'Libre Baskerville', sans-serif !important;
-}
-
-@each $color, $value in $colors {
-	.bg-#{$color} {
-		background-color: $value !important;
-	}
-	.text-#{$color} {
-		color: $value !important;
-	}
 }
 
 .svg {
@@ -31,16 +10,4 @@
 
 .transition-fast {
 	transition: $transition-fast;
-}
-
-.h-0 {
-	height: 0 !important;
-}
-
-.display-4 {
-	@extend .first-font;
-}
-
-.btn, .modal-header, .modal-body {
-	@extend .rounded-0;
 }
