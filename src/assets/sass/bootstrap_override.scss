@@ -27,6 +27,7 @@ $theme-colors: (
 
 $enable-rounded: false;
 $enable-responsive-font-sizes: true;
+$enable-shadows: true;
 
 // Sizes
 
@@ -49,3 +50,8 @@ $embed-responsive-aspect-ratios: ();
 // Typography
 
 $font-family-base: 'Roboto', sans-serif;
+
+// Cards
+
+$card-spacer-y: 1.5rem;
+$card-spacer-x: 1.5rem;

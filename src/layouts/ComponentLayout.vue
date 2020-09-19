@@ -1,6 +1,6 @@
 <template>
 	<b-row class="pb-4 pb-sm-5" no-gutters>
-		<b-col cols="12">
+		<b-col cols="12" v-if="title">
 			<h2 class="text-center my-4 my-sm-5">{{ title }}</h2>
 		</b-col>
 		<b-col class="mx-auto" cols="11" md="10" xl="8">
@@ -11,16 +11,15 @@
 
 <script>
 export default {
-	name: 'Layout',
+	name: 'ComponentLayout',
 	components: {},
 	data() {
 		return {};
 	},
 	props: {
 		title: {
-			required: true,
-			type: String,
-		},
+			type: String
+		}
 	},
 	methods: {},
 	computed: {},

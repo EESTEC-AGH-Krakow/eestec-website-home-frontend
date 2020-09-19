@@ -15,7 +15,7 @@
 
 <script>
 import ArticleCard from './ArticleCard';
-import Layout from '../layouts/PageLayout';
+import Layout from '../layouts/ComponentLayout';
 
 export default {
 	name: 'Articles',
@@ -24,7 +24,7 @@ export default {
 	},
 	components: {
 		Layout,
-		ArticleCard,
+		ArticleCard
 	},
 	props: {
 		articles: Array,

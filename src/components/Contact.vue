@@ -18,16 +18,16 @@
 </template>
 
 <script>
-import Layout from '../layouts/PageLayout';
+import Layout from '../layouts/ComponentLayout';
 
 export default {
 	name: 'Contact',
-	components: {Layout},
+	components: { Layout },
 	data() {
 		return {
-			publicPath: process.env.BASE_URL,
+			publicPath: process.env.BASE_URL
 		};
-	},
+	}
 };
 </script>
 
