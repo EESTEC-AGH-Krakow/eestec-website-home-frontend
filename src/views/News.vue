@@ -1,6 +1,6 @@
 <template>
 	<b-row no-gutters>
-		<Articles :articles="articles" hideButton/>
+		<Articles :articles="articles" hideButton />
 		<b-pagination-nav base-url="#" class="mx-auto" number-of-pages="10"></b-pagination-nav>
 	</b-row>
 </template>
@@ -13,12 +13,12 @@ export default {
 	name: 'Blog',
 	data() {
 		return {
-			articles: articles,
+			articles: articles
 		};
 	},
 	components: {
-		Articles,
-	},
+		Articles
+	}
 };
 </script>
 

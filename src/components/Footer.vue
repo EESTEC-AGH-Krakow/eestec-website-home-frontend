@@ -1,5 +1,10 @@
 <template>
-	<Layout title="Kontakt">
+	<div class="p-5">
+		<b-row no-gutters>
+			<b-col>
+				<h2 class="text-center">Kontakt</h2>
+			</b-col>
+		</b-row>
 		<b-row no-gutters>
 			<b-col class="d-flex" cols="12" sm="6">
 				<b-link class=" d-flex align-items-center" href="mailto:wspolpraca@eestec.pl" target="_blank">
@@ -14,15 +19,12 @@
 				</b-link>
 			</b-col>
 		</b-row>
-	</Layout>
+	</div>
 </template>
 
 <script>
-import Layout from '../layouts/ComponentLayout';
-
 export default {
 	name: 'Contact',
-	components: { Layout },
 	data() {
 		return {
 			publicPath: process.env.BASE_URL

@@ -9,7 +9,7 @@
 			<router-view class="pt-4"></router-view>
 		</main>
 		<footer>
-			<Contact id="contact" />
+			<Footer id="contact" />
 		</footer>
 	</div>
 </template>
@@ -17,7 +17,7 @@
 <script>
 import { headroom } from 'vue-headroom';
 import Navbar from '../components/Navbar';
-import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 import Main from '../components/Main';
 
 export default {
@@ -25,7 +25,7 @@ export default {
 	components: {
 		Main,
 		Navbar,
-		Contact,
+		Footer,
 		headroom
 	},
 	computed: {

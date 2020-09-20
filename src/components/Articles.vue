@@ -1,21 +1,20 @@
 <template>
-	<Layout title="Blog">
+	<div>
 		<b-row>
-			<b-col :key="article.id" class="d-flex my-2" cols="12" sm="6" v-for="article in articles">
-				<ArticleCard :article="article" />
+			<b-col :key="index" class="d-flex my-2" cols="12" sm="6" v-for="(article, index) in articles">
+				<Article :article="article" />
 			</b-col>
 		</b-row>
 		<b-row>
 			<b-col class="d-flex mt-4 mt-sm-5" cols="12" v-if="!hideButton">
-				<b-button :to="{ name: 'blog' }" class="mx-auto" variant="primary">Wszystkie posty</b-button>
+				<b-button :to="{ name: 'news' }" class="mx-auto" variant="primary">Wszystkie posty</b-button>
 			</b-col>
 		</b-row>
-	</Layout>
+	</div>
 </template>
 
 <script>
-import ArticleCard from './ArticleCard';
-import Layout from '../layouts/ComponentLayout';
+import Article from './Article';
 
 export default {
 	name: 'Articles',
@@ -23,8 +22,7 @@ export default {
 		return {};
 	},
 	components: {
-		Layout,
-		ArticleCard
+		Article
 	},
 	props: {
 		articles: Array,
