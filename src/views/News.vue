@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Articles from '../components/Articles';
+import Articles from '../components/home/Articles';
 import articles from '@/../mock/truncatedArticles';
 
 export default {

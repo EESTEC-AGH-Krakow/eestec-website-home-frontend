@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Articles from '../components/Articles';
-import AboutUs from '../components/AboutUs';
+import Articles from '../components/home/Articles';
+import AboutUs from '../components/home/AboutUs';
 import articles from '@/../mock/truncatedArticles';
 
 export default {

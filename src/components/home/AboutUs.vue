@@ -1,5 +1,5 @@
 <template>
-	<Layout title="O nas">
+	<ComponentLayout title="O nas">
 		<b-row no-gutters>
 			<b-col class="mx-auto" cols="12">
 				<p class="text-justify mb-4 mb-sm-5">
@@ -13,16 +13,16 @@
 				</p>
 			</b-col>
 		</b-row>
-	</Layout>
+	</ComponentLayout>
 </template>
 
 <script>
-import Layout from '../layouts/PageLayout';
+import ComponentLayout from '../../layouts/ComponentLayout';
 
 export default {
 	name: 'AboutUs',
 	components: {
-		Layout,
+		ComponentLayout
 	}
 };
 </script>

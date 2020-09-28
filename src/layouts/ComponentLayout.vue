@@ -11,7 +11,7 @@
 
 <script>
 export default {
-	name: 'Layout',
+	name: 'ComponentLayout',
 	components: {},
 	data() {
 		return {};

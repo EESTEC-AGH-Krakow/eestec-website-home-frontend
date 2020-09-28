@@ -1,8 +1,8 @@
 <template>
-	<Layout title="Blog">
+	<ComponentLayout title="Blog">
 		<b-row>
 			<b-col :key="article.id" class="d-flex my-2" cols="12" sm="6" v-for="article in articles">
-				<ArticleCard :article="article" />
+				<ArticleCard :article="article"/>
 			</b-col>
 		</b-row>
 		<b-row>
@@ -10,12 +10,12 @@
 				<b-button :to="{ name: 'blog' }" class="mx-auto" variant="primary">Wszystkie posty</b-button>
 			</b-col>
 		</b-row>
-	</Layout>
+	</ComponentLayout>
 </template>
 
 <script>
 import ArticleCard from './ArticleCard';
-import Layout from '../layouts/PageLayout';
+import ComponentLayout from '../../layouts/ComponentLayout';
 
 export default {
 	name: 'Articles',
@@ -23,7 +23,7 @@ export default {
 		return {};
 	},
 	components: {
-		Layout,
+		ComponentLayout,
 		ArticleCard,
 	},
 	props: {
