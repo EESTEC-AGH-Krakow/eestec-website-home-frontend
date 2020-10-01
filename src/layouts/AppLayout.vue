@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<headroom v-if="largerDevice" id="headroom" class="h-0">
+		<headroom v-if="largerDevice" id="headroom">
 			<Navbar/>
 		</headroom>
 		<Navbar v-else/>
@@ -16,9 +16,9 @@
 
 <script>
 import {headroom} from 'vue-headroom';
-import Navbar from '../components/Navbar';
-import Contact from '../components/Contact';
-import Main from '../components/Main';
+import Navbar from '../components/common/Header';
+import Contact from '../components/common/Footer';
+import Main from '../components/common/Main';
 
 export default {
 	name: 'AppLayout',
@@ -31,7 +31,7 @@ export default {
 	computed: {
 		largerDevice() {
 			return this.wMD || this.wLG || this.wXL;
-		},
+		}
 	}
 };
 </script>

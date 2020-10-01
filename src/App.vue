@@ -7,15 +7,15 @@
 </template>
 
 <script>
-import Loading from "./components/Loading";
-import AppLayout from "./layouts/AppLayout";
-import { mapActions, mapState } from "vuex";
+import Loading from './components/common/Loading';
+import AppLayout from './layouts/AppLayout';
+import {mapActions, mapState} from 'vuex';
 
 export default {
-	name: "app",
+	name: 'app',
 	components: {
 		Loading,
-		AppLayout
+		AppLayout,
 	},
 	mounted() {
 		this.loadPage();

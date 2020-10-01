@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import Layout from '../layouts/PageLayout';
+import Layout from '../../layouts/ComponentLayout';
 
 export default {
-	name: 'Contact',
+	name: 'Footer',
 	components: {Layout},
 	data() {
 		return {

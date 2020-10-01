@@ -1,10 +1,11 @@
 <template>
-	<header></header>
+	<header>
+	</header>
 </template>
 
 <script>
 export default {
-	name: 'Navbar',
+	name: 'Header',
 	data() {
 		return {};
 	},
