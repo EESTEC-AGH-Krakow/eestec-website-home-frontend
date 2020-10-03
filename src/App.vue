@@ -9,26 +9,20 @@
 <script>
 import Loading from './components/common/Loading';
 import AppLayout from './layouts/AppLayout';
-import {mapActions, mapState} from 'vuex';
+import { mapState } from 'vuex';
 
 export default {
 	name: 'app',
 	components: {
 		Loading,
-		AppLayout,
-	},
-	mounted() {
-		this.loadPage();
-	},
-	methods: {
-		...mapActions(['loadPage']),
+		AppLayout
 	},
 	computed: {
-		...mapState(["isLoading"]),
+		...mapState('general',['isLoading']),
 		view() {
 			return this.isLoading ? 'Loading' : 'AppLayout';
-		},
-	},
+		}
+	}
 };
 </script>
 
