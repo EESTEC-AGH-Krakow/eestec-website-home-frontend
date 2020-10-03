@@ -1,5 +1,7 @@
 <template>
-
+	<div>
+		<span>test</span>
+	</div>
 </template>
 
 <script>
@@ -11,10 +13,8 @@ export default {
 	},
 	methods: {},
 	watch: {},
-	computed: {},
+	computed: {}
 };
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

@@ -1,4 +1,8 @@
-<template> </template>
+<template>
+	<div>
+		<h1>Dupauapukokoapa</h1>
+	</div>
+</template>
 
 <script>
 export default {

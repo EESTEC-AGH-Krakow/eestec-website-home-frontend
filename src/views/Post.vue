@@ -1,8 +1,7 @@
 <template>
 	<b-row no-gutters>
 		<b-col class="mx-auto my-4" cols="11" md="8" sm="10">
-			<b-card :img-alt="article.title" :img-src="article.mainImage" border-variant="danger"
-							class="shadow-lg border-0 bg-primary text-white" img-top tag="article">
+			<b-card :img-alt="article.title" :img-src="article.mainImage" border-variant="danger" class="shadow-lg border-0 bg-primary text-white" img-top tag="article">
 				<h1 class="m-0">{{ article.title }}</h1>
 				<div class="d-flex flex-column mb-2">
 					<small>{{ article.author }}</small>
@@ -15,7 +14,6 @@
 </template>
 
 <script>
-
 export default {
 	name: 'Post',
 	components: {},
@@ -26,17 +24,16 @@ export default {
 				mainImage: 'img',
 				author: 'Paweł Potacaal',
 				date: new Date(),
-				html: '<p>example html content with some <strong>tags</strong>.</p>',
-			},
+				html: '<p>example html content with some <strong>tags</strong>.</p>'
+			}
 		};
 	},
 	computed: {
 		date() {
 			const date = new Date(this.article.date);
-			return `${date.getDay()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes() ||
-			'00'}`;
-		},
-	},
+			return `${date.getDay()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes() || '00'}`;
+		}
+	}
 };
 </script>
 

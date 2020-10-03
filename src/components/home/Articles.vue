@@ -2,7 +2,7 @@
 	<ComponentLayout title="Blog">
 		<b-row>
 			<b-col :key="article.id" class="d-flex my-2" cols="12" sm="6" v-for="article in articles">
-				<ArticleCard :article="article"/>
+				<ArticleCard :article="article" />
 			</b-col>
 		</b-row>
 		<b-row>
@@ -24,7 +24,7 @@ export default {
 	},
 	components: {
 		ComponentLayout,
-		ArticleCard,
+		ArticleCard
 	},
 	props: {
 		articles: Array,

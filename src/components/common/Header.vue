@@ -1,6 +1,5 @@
 <template>
-	<header>
-	</header>
+	<header></header>
 </template>
 
 <script>
@@ -11,7 +10,7 @@ export default {
 	},
 	methods: {},
 	computed: {},
-	watch: {},
+	watch: {}
 };
 </script>
 
