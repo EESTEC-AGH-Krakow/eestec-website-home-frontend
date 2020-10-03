@@ -9,7 +9,7 @@
 <script>
 import Loading from './components/common/Loading';
 import AppLayout from './layouts/AppLayout';
-import { mapState } from 'vuex';
+import {mapState} from 'vuex';
 
 export default {
 	name: 'app',
@@ -18,7 +18,7 @@ export default {
 		AppLayout
 	},
 	computed: {
-		...mapState('general',['isLoading']),
+		...mapState('general', ['isLoading']),
 		view() {
 			return this.isLoading ? 'Loading' : 'AppLayout';
 		}
