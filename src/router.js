@@ -37,13 +37,13 @@ const router = new Router({
 		{
 			path: '/project/:id',
 			name: 'project',
-			component: () => import(/* webpackChunkName: "gallery" */ './views/Project.vue')
+			component: () => import(/* webpackChunkName: "project" */ './views/Project.vue')
 		}
 	]
 });
 
-router.beforeEach(async () => {
-	await store.dispatch('general/loadPage');
+router.beforeEach((to, from, next) => {
+	store.dispatch('general/loadPage').then(() => next());
 });
 
 export default router;

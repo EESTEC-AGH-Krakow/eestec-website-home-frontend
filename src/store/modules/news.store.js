@@ -1,4 +1,4 @@
-import categoryStateInit from './state.init';
+import categoryStateInit from '../state.init';
 
 export default {
 	namespaced: true,

@@ -1,4 +1,4 @@
-import axios from 'axios';
+import HTTP from '../http';
 
 export default {
 	namespaced: true,
@@ -6,35 +6,23 @@ export default {
 		isLoading: true
 	}),
 	mutations: {
-		loading(state, payload) {
+		changeLoading(state, payload) {
 			state.isLoading = payload;
 		}
 	},
 	actions: {
 		loadPage({ commit }) {
 			setTimeout(() => {
-				commit('loading', false);
+				commit('changeLoading', false);
 			}, 3000);
 		},
 		async getPaginationPayload(context, category) {
-			const { data } = await axios({
-				method: 'GET',
-				url: `${process.env.VUE_APP_BACKEND_API_HOST_URL}/categories&slug=${category.name}`
-			});
-			return axios({
-				method: 'GET',
-				url: `${process.env.VUE_APP_BACKEND_API_HOST_URL}/posts&categories=${data[0].id}&per_page=${category.postsPerPage}&page=${category.currentPage}`
-			});
+			const data = await HTTP.getCategoryID(category.name);
+			return HTTP.getPayloadWithPagination(data[0].id, category);
 		},
 		async getPayload(context, name) {
-			const { data } = await axios({
-				method: 'GET',
-				url: `${process.env.VUE_APP_BACKEND_API_HOST_URL}/categories&slug=${name}`
-			});
-			return axios({
-				method: 'GET',
-				url: `${process.env.VUE_APP_BACKEND_API_HOST_URL}/posts&categories=${data[0].id}`
-			});
+			const data = await HTTP.getCategoryID(name);
+			return HTTP.getPayload(data[0].id);
 		}
 	}
 };
