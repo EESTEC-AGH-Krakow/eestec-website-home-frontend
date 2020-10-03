@@ -9,7 +9,8 @@ module.exports = {
 							 @import '@/assets/sass/bootstrap_override.scss';
 							 @import '~bootstrap/scss/bootstrap.scss';
 							 @import '@/assets/sass/all.scss';
-							 @import '@/assets/sass/animations.scss';`
+							 @import '@/assets/sass/animations.scss';
+							 @import '@/assets/sass/project_carousel.scss';`
 			}
 		}
 	},

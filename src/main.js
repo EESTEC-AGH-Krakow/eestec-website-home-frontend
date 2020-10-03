@@ -12,6 +12,7 @@ import VueParticles from 'vue-particles';
 import VueMediaQueryMixin from 'vue-media-query-mixin';
 import store from './store/index.store';
 import router from './router';
+import VueTruncate from 'vue-truncate-filter';
 
 library.add(fas, fab);
 
@@ -20,6 +21,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(VueMediaQueryMixin, {
 	framework: 'bootstrap'
 });
+Vue.use(VueTruncate);
 Vue.use(BootstrapVue);
 Vue.use(VueParticles);
 Vue.use(VueScrollTo, {

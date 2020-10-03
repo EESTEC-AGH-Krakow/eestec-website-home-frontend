@@ -3,7 +3,7 @@ import axios from 'axios';
 export default {
 	namespaced: true,
 	state: () => ({
-		isLoading: true
+		isLoading: false
 	}),
 	mutations: {
 		loading(state, payload) {

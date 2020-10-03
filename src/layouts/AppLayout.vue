@@ -6,7 +6,7 @@
 		<Navbar v-else />
 		<main>
 			<Main id="main" />
-			<router-view></router-view>
+			<project></project>
 		</main>
 		<footer>
 			<Contact id="contact" />
@@ -19,10 +19,12 @@ import { headroom } from 'vue-headroom';
 import Navbar from '../components/common/Header';
 import Contact from '../components/common/Footer';
 import Main from '../components/common/Main';
+import Project from '../views/Project';
 
 export default {
 	name: 'AppLayout',
 	components: {
+		Project,
 		Main,
 		Navbar,
 		Contact,
