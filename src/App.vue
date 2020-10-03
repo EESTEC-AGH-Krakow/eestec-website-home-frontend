@@ -18,7 +18,7 @@ export default {
 		AppLayout
 	},
 	computed: {
-		...mapState('general',['isLoading']),
+		...mapState('general', ['isLoading']),
 		view() {
 			return this.isLoading ? 'Loading' : 'AppLayout';
 		}

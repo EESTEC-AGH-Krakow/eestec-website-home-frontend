@@ -1,21 +1,21 @@
 <template>
 	<div>
 		<headroom v-if="largerDevice" id="headroom">
-			<Navbar/>
+			<Navbar />
 		</headroom>
-		<Navbar v-else/>
+		<Navbar v-else />
 		<main>
-			<Main id="main"/>
+			<Main id="main" />
 			<router-view></router-view>
 		</main>
 		<footer>
-			<Contact id="contact"/>
+			<Contact id="contact" />
 		</footer>
 	</div>
 </template>
 
 <script>
-import {headroom} from 'vue-headroom';
+import { headroom } from 'vue-headroom';
 import Navbar from '../components/common/Header';
 import Contact from '../components/common/Footer';
 import Main from '../components/common/Main';
@@ -26,7 +26,7 @@ export default {
 		Main,
 		Navbar,
 		Contact,
-		headroom,
+		headroom
 	},
 	computed: {
 		largerDevice() {

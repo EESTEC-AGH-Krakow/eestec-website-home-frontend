@@ -1,7 +1,7 @@
 <template>
 	<b-container fluid>
-		<AboutUs id="about-us"/>
-		<Articles id="articles" :articles="articles"/>
+		<AboutUs id="about-us" />
+		<Articles id="articles" :articles="articles" />
 	</b-container>
 </template>
 
@@ -14,13 +14,13 @@ export default {
 	name: 'Home',
 	data() {
 		return {
-			articles,
+			articles
 		};
 	},
 	components: {
 		AboutUs,
-		Articles,
-	},
+		Articles
+	}
 };
 </script>
 

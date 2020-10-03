@@ -22,12 +22,12 @@ import Layout from '../../layouts/ComponentLayout';
 
 export default {
 	name: 'Footer',
-	components: {Layout},
+	components: { Layout },
 	data() {
 		return {
-			publicPath: process.env.BASE_URL,
+			publicPath: process.env.BASE_URL
 		};
-	},
+	}
 };
 </script>
 
