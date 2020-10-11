@@ -1,0 +1,17 @@
+.carousel-indicators {
+	margin-bottom: 0;
+	top: 100%;
+
+	li {
+		height: 7px;
+		width: 8px;
+		box-shadow: $box-shadow-lg;
+		background-color: $secondary;
+		border-radius: 50%;
+		margin: $spacer / 4 $spacer/ 4 0;
+
+		&.active {
+			background-color: $red;
+		}
+	}
+}

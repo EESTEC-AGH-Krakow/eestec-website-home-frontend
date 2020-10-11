@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Loading from './components/Loading';
+import Loading from './components/common/Loading';
 import AppLayout from './layouts/AppLayout';
 import { mapActions, mapState } from 'vuex';
 

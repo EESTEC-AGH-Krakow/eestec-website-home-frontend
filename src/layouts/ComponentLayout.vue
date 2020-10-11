@@ -3,7 +3,7 @@
 		<b-col cols="12" v-if="title && !cardLayout">
 			<h2 class="text-center my-4 my-sm-5">{{ title }}</h2>
 		</b-col>
-		<b-col class="mx-auto" cols="11" md="10" xl="8">
+		<b-col class="mx-auto" cols="12" md="10" sm="11" xl="8">
 			<Card :image="image" :title="title" show-more v-if="cardLayout">
 				<slot></slot>
 			</Card>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Card from '../components/Card';
+import Card from '../components/common/Card';
 
 export default {
 	name: 'ComponentLayout',

@@ -16,9 +16,9 @@
 
 <script>
 import { headroom } from 'vue-headroom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Main from '../components/Main';
+import Navbar from '../components/common/Navbar';
+import Footer from '../components/common/Footer';
+import Main from '../components/common/Main';
 
 export default {
 	name: 'AppLayout',
